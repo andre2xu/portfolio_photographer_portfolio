@@ -1,5 +1,6 @@
 @mixin HomePageStylesheet() {
     #home-page {
-        
+        height: 100vh;
+        overflow-y: auto;
     }
 }
