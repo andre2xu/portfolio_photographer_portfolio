@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <nav>
-            <h1><Link to={'/'}>Protos</Link></h1>
+            <h1>
+                <Link to={'/'}><span>Pro</span>tos</Link>
+            </h1>
 
             <ul className='navbar-links'>
                 <li><Link to={'/'}>My Work</Link></li>
