@@ -129,6 +129,11 @@
             }
         }
 
+        @media screen and (min-width: 400px) {
+            padding-left: 30px;
+            padding-right: 25px;
+        }
+
         @media screen and (min-width: 520px) {
             .navbar-links {
                 display: flex;

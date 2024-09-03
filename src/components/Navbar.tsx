@@ -21,7 +21,7 @@ function Navbar() {
                 <div className='hamburger-menu-line'></div>
             </div>
 
-            <ul className='hamburger-menu'>
+            <ul className='hamburger-menu hide'>
                 <li>X</li>
                 <li><Link to={'/'}>My Work</Link></li>
                 <li><Link to={'/'}>About Me</Link></li>
