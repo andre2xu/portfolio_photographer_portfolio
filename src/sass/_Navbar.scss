@@ -23,7 +23,7 @@
 
         .navbar-links {
             list-style: none;
-            display: flex;
+            display: none;
             flex-direction: row;
             margin: 0;
             margin-left: auto;
@@ -42,6 +42,13 @@
                     font-size: 16px;
                     cursor: pointer;
                 }
+            }
+        }
+
+        // RESPONSIVENESS
+        @media screen and (min-width: 520px) {
+            .navbar-links {
+                display: flex;
             }
         }
     }
