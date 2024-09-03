@@ -1,6 +1,11 @@
 @import 'Navbar';
 @import 'HomePageStylesheet';
 
+@font-face {
+    font-family: PlaywriteCU-Regular;
+    src: url('/fonts/PlaywriteCU-Regular.woff') format('woff'); // relative to public folder
+}
+
 body {
     margin: 0;
     padding: 0;
