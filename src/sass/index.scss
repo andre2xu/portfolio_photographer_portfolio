@@ -16,4 +16,8 @@ body {
 
         @include HomePageStylesheet();
     }
+
+    @media screen and (max-width: 249px) {
+        display: none;
+    }
 }
