@@ -176,5 +176,26 @@
                 display: none;
             }
         }
+
+        @media screen and (min-width: 2000px) {
+            padding-left: 1.5vw;
+            padding-right: 1.25vw;
+
+            h1 a {
+                font-size: 1vw;
+            }
+
+            .navbar-links {
+                margin-right: 0.5vw;
+
+                li {
+                    margin-left: 1.5vw;
+
+                    a {
+                        font-size: 0.8vw;
+                    }
+                }
+            }
+        }
     }
 }
