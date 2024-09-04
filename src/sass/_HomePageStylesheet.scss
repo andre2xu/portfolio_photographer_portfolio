@@ -36,51 +36,62 @@
 
                     .cover {
                         position: absolute;
-                        z-index: 1;
-                        width: 1000px;
-                        height: 500px;
-                        background-color: #000;
+                        width: 0;
+                        height: 0;
+                        background-color: transparent;
 
                         &.n1 {
-                            // background-color: red;
-                            top: -470px;
+                            top: -250px;
                             left: 0;
-                            transform: rotate(0deg) translate(0, 235px);
+                            border-top: 0px solid transparent;
+                            border-bottom: 500px solid red;
+                            border-left: 0px solid transparent;
+                            border-right: 250px solid transparent;
                         }
 
                         &.n2 {
-                            // background-color: blue;
-                            top: -500px;
-                            left: 0px;
-                            transform: rotate(60deg) translate(0, 250px);
+                            top: -250px;
+                            left: 0;
+                            border-top: 500px solid blue;
+                            border-bottom: 0px solid transparent;
+                            border-left: 250px solid transparent;
+                            border-right: 250px solid transparent;
                         }
 
                         &.n3 {
-                            // background-color: green;
-                            top: 500px;
-                            left: 0;
-                            transform: rotate(-60deg) translate(0, -250px);
+                            top: -250px;
+                            left: 250px;
+                            border-top: 500px solid transparent;
+                            border-bottom: 0px solid transparent;
+                            border-left: 0px solid transparent;
+                            border-right: 250px solid green;
                         }
 
                         &.n4 {
-                            // background-color: yellow;
-                            top: 470px;
+                            top: 250px;
                             left: 0;
-                            transform: rotate(0deg) translate(0, -235px);
+                            border-top: 0px solid transparent;
+                            border-bottom: 500px solid transparent;
+                            border-left: 250px solid yellow;
+                            border-right: 0px solid transparent;
                         }
 
                         &.n5 {
-                            // background-color: purple;
-                            top: 0;
-                            left: -790px;
-                            transform: rotate(240deg) translate(0, 210px);
+                            top: 250px;
+                            left: 0;
+                            border-top: 0px solid transparent;
+                            border-bottom: 500px solid purple;
+                            border-left: 250px solid transparent;
+                            border-right: 250px solid transparent;
                         }
 
                         &.n6 {
-                            // background-color: pink;
-                            top: 0;
-                            left: -790px;
-                            transform: rotate(-240deg) translate(0, -210px);
+                            top: 250px;
+                            left: 250px;
+                            border-top: 0px solid transparent;
+                            border-bottom: 500px solid transparent;
+                            border-left: 0px solid transparent;
+                            border-right: 250px solid pink;
                         }
                     }
 
