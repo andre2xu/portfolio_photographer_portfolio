@@ -144,7 +144,7 @@ function Home() {
 
             <main>
                 <div id='teaser-section' className='section'>
-                    <div>
+                    <div id='teaser-section-text'>
                         <h1>Professional Photos</h1>
 
                         <p>Don't settle for less. Go for the best.</p>

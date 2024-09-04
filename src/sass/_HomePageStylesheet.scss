@@ -16,6 +16,18 @@
                 align-items: center;
                 padding: 150px 0 100px;
 
+                #teaser-section-text {
+                    h1 {
+                        font-family: "PlaywriteCU-Regular", sans-serif;
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-family: serif;
+                        font-size: 24px;
+                    }
+                }
+
                 #camera {
                     $camera_bg: #1f2227;
 
