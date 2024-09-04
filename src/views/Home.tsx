@@ -17,14 +17,22 @@ function Home() {
         n1: [0, -700, undefined]
     };
     const CAMERA_SHUTTER_IS_CLOSED: React.MutableRefObject<boolean> = React.useRef(false);
+    const TEASER_IMAGES: React.MutableRefObject<JQuery<HTMLElement> | undefined> = React.useRef(undefined);
+    const IMAGE_POINTER: React.MutableRefObject<number> = React.useRef(0);
 
 
 
-    // HOOKS
+    // EFFECTS
     React.useEffect(() => {
         for (const COVER in CAMERA_SHUTTER_COVERS_OPEN_POSITIONS) {
             CAMERA_SHUTTER_COVERS_OPEN_POSITIONS[COVER][2] = $(`#camera-shutter .cover.${COVER}`).first();
         }
+
+        TEASER_IMAGES.current = $('#camera-shutter .teaser-image');
+
+        setInterval(() => {
+            changeTeaserImage();
+        }, 5000);
     });
 
 
@@ -99,6 +107,34 @@ function Home() {
         }
     };
 
+    function changeTeaserImage() {
+        // close
+        toggleCameraShutter();
+
+        // open
+        setTimeout(() => {
+            // change image
+            if (TEASER_IMAGES.current !== undefined) {
+                // hide current image
+                TEASER_IMAGES.current.eq(IMAGE_POINTER.current).addClass('hide');
+
+                // change pointer
+                const LAST_INDEX: number = TEASER_IMAGES.current.length - 1;
+
+                IMAGE_POINTER.current += 1;
+
+                if ((IMAGE_POINTER.current < LAST_INDEX) === false) {
+                    IMAGE_POINTER.current = 0;
+                }
+
+                // display new image
+                TEASER_IMAGES.current.eq(IMAGE_POINTER.current).removeClass('hide');
+            }
+
+            toggleCameraShutter();
+        }, 1000);
+    };
+
 
 
     // HTML
@@ -124,10 +160,10 @@ function Home() {
                         <div className='cover n5'></div>
                         <div className='cover n6'></div>
 
-                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-misha-earle-366060-1777843.jpg)'}}></div>
+                        <div className='teaser-image' style={{backgroundImage: 'url(/images/pexels-misha-earle-366060-1777843.jpg)'}}></div>
                         <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-sabel-blanco-662810-2339724.jpg)'}}></div>
                         <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-kpaukshtite-3270222.jpg)'}}></div>
-                        <div className='teaser-image' style={{backgroundImage: 'url(/images/pexels-pixabay-258154.jpg)'}}></div>
+                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-pixabay-258154.jpg)'}}></div>
                     </div>
                 </div>
             </main>
