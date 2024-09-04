@@ -44,54 +44,60 @@
                             top: -250px;
                             left: 0;
                             border-top: 0px solid transparent;
-                            border-bottom: 500px solid red;
+                            border-bottom: 1000px solid red;
                             border-left: 0px solid transparent;
-                            border-right: 250px solid transparent;
+                            border-right: 500px solid transparent;
+                            transform: translate(0, -700px);
                         }
 
                         &.n2 {
                             top: -250px;
                             left: 0;
-                            border-top: 500px solid blue;
+                            border-top: 1000px solid blue;
                             border-bottom: 0px solid transparent;
-                            border-left: 250px solid transparent;
-                            border-right: 250px solid transparent;
+                            border-left: 500px solid transparent;
+                            border-right: 500px solid transparent;
+                            transform: translate(230px, 0px);
                         }
 
                         &.n3 {
                             top: -250px;
-                            left: 250px;
-                            border-top: 500px solid transparent;
+                            left: 0px;
+                            border-top: 1000px solid transparent;
                             border-bottom: 0px solid transparent;
                             border-left: 0px solid transparent;
-                            border-right: 250px solid green;
+                            border-right: 500px solid green;
+                            transform: translate(230px, 0);
                         }
 
                         &.n4 {
                             top: 250px;
-                            left: 0;
+                            left: 250px;
                             border-top: 0px solid transparent;
-                            border-bottom: 500px solid transparent;
-                            border-left: 250px solid yellow;
-                            border-right: 0px solid transparent;
+                            border-bottom: 1000px solid transparent;
+                            border-left: 0px solid transparent;
+                            border-right: 500px solid yellow;
+                            transform: translate(-140px, 200px);
                         }
 
                         &.n5 {
                             top: 250px;
-                            left: 0;
+                            left: -250px;
                             border-top: 0px solid transparent;
-                            border-bottom: 500px solid purple;
-                            border-left: 250px solid transparent;
-                            border-right: 250px solid transparent;
+                            border-bottom: 1000px solid purple;
+                            border-left: 500px solid transparent;
+                            border-right: 500px solid transparent;
+                            transform: translate(-230px, 10px);
                         }
 
                         &.n6 {
                             top: 250px;
-                            left: 250px;
+                            left: -250px;
                             border-top: 0px solid transparent;
-                            border-bottom: 500px solid transparent;
-                            border-left: 0px solid transparent;
-                            border-right: 250px solid pink;
+                            border-bottom: 1000px solid transparent;
+                            border-left: 500px solid pink;
+                            border-right: 0px solid transparent;
+                            transform: translate(-120px, -200px);
                         }
                     }
 
