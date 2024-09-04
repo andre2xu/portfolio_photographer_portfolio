@@ -14,7 +14,7 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                padding: 130px 0;
+                padding: 150px 0 100px;
 
                 #camera {
                     $camera_bg: #1f2227;
@@ -23,7 +23,7 @@
                     justify-content: center;
                     align-items: center;
                     background-color: $camera_bg;
-                    padding: 100px 300px;
+                    padding: 100px 270px 50px;
                     border-radius: 50px;
                     box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
                     position: relative;
@@ -47,9 +47,9 @@
 
                     #view-finder {
                         width: 500px;
-                        height: 150px;
+                        height: 250px;
                         position: absolute;
-                        top: -12%;
+                        top: -14%;
                         left: 50%;
                         transform: translateX(-50%);
                         background-color: $camera_bg;

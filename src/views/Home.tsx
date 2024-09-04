@@ -30,9 +30,9 @@ function Home() {
 
         TEASER_IMAGES.current = $('#camera-shutter .teaser-image');
 
-        // setInterval(() => {
-        //     changeTeaserImage();
-        // }, 5000);
+        setInterval(() => {
+            changeTeaserImage();
+        }, 5000);
     });
 
 
