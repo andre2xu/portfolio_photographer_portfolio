@@ -160,10 +160,13 @@ function Home() {
                         <div className='cover n5'></div>
                         <div className='cover n6'></div>
 
-                        <div className='teaser-image' style={{backgroundImage: 'url(/images/pexels-misha-earle-366060-1777843.jpg)'}}></div>
+                        <div className='teaser-image' style={{backgroundImage: 'url(/images/pexels-trungnguyenphotog-1630860.jpg)'}}></div>
+
                         <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-sabel-blanco-662810-2339724.jpg)'}}></div>
-                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-kpaukshtite-3270222.jpg)'}}></div>
-                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-pixabay-258154.jpg)'}}></div>
+
+                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-valeriya-1961794.jpg)'}}></div>
+
+                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-pixabay-261102.jpg)'}}></div>
                     </div>
                 </div>
             </main>
