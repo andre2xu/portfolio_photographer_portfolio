@@ -14,104 +14,145 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                padding: 100px 0;
+                padding: 130px 0;
 
-                #camera-shutter {
-                    margin-left: 200px;
-                    width: 500px;
-                    height: 500px;
+                #camera {
+                    $camera_bg: #1f2227;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $camera_bg;
+                    padding: 100px 300px;
+                    border-radius: 50px;
+                    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
                     position: relative;
-                    overflow: hidden;
+                    margin-left: 150px;
 
-                    #lens {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: inherit;
-                        height: inherit;
-                        border-radius: 50%;
-                        outline: solid 250px #fff;
-                        z-index: 2;
-                    }
-
-                    .cover {
-                        position: absolute;
-                        width: 0;
-                        height: 0;
+                    &.hide {
                         background-color: transparent;
+                        border-color: transparent;
+                        box-shadow: none;
 
-                        &.n1 {
-                            top: -250px;
-                            left: 1px;
-                            border-top: 0px solid transparent;
-                            border-bottom: 1000px solid #111213;
-                            border-left: 0px solid transparent;
-                            border-right: 500px solid transparent;
-                            transform: translate(0, -700px);
+                        #view-finder {
+                            display: none;
                         }
 
-                        &.n2 {
-                            top: -250px;
-                            left: 0;
-                            border-top: 1000px solid #101217;
-                            border-bottom: 0px solid transparent;
-                            border-left: 500px solid transparent;
-                            border-right: 500px solid transparent;
-                            transform: translate(230px, 0px);
-                        }
-
-                        &.n3 {
-                            top: -250px;
-                            left: 0px;
-                            border-top: 1000px solid transparent;
-                            border-bottom: 0px solid transparent;
-                            border-left: 0px solid transparent;
-                            border-right: 500px solid #16181c;
-                            transform: translate(230px, 0);
-                        }
-
-                        &.n4 {
-                            top: 250px;
-                            left: 250px;
-                            border-top: 0px solid transparent;
-                            border-bottom: 1000px solid transparent;
-                            border-left: 0px solid transparent;
-                            border-right: 500px solid #131318;
-                            transform: translate(-140px, 200px);
-                        }
-
-                        &.n5 {
-                            top: 250px;
-                            left: -250px;
-                            border-top: 0px solid transparent;
-                            border-bottom: 1000px solid #0f1012;
-                            border-left: 500px solid transparent;
-                            border-right: 500px solid transparent;
-                            transform: translate(-230px, 10px);
-                        }
-
-                        &.n6 {
-                            top: 250px;
-                            left: -250px;
-                            border-top: 0px solid transparent;
-                            border-bottom: 1000px solid transparent;
-                            border-left: 500px solid #101012;
-                            border-right: 0px solid transparent;
-                            transform: translate(-120px, -200px);
+                        #camera-shutter {
+                            #lens {
+                                outline-color: #fff;
+                            }
                         }
                     }
 
-                    .teaser-image {
-                        height: 100%;
-                        width: 100%;
-                        height: inherit;
-                        width: inherit;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
+                    #view-finder {
+                        width: 500px;
+                        height: 150px;
+                        position: absolute;
+                        top: -12%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: $camera_bg;
+                        border-top-left-radius: 100px;
+                        border-top-right-radius: 100px;
+                    }
 
-                        &.hide {
-                            display: none;
+                    #camera-shutter {
+                        width: 500px;
+                        height: 500px;
+                        position: relative;
+                        overflow: hidden;
+
+                        #lens {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: inherit;
+                            height: inherit;
+                            border-radius: 50%;
+                            outline: solid 250px $camera_bg;
+                            z-index: 2;
+                        }
+
+                        .cover {
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            background-color: transparent;
+
+                            &.n1 {
+                                top: -250px;
+                                left: 0;
+                                border-top: 0px solid transparent;
+                                border-bottom: 1000px solid #111213;
+                                border-left: 0px solid transparent;
+                                border-right: 500px solid transparent;
+                                transform: translate(0, -700px);
+                            }
+
+                            &.n2 {
+                                top: -250px;
+                                left: -1px;
+                                border-top: 1000px solid #101217;
+                                border-bottom: 0px solid transparent;
+                                border-left: 500px solid transparent;
+                                border-right: 500px solid transparent;
+                                transform: translate(230px, 0px);
+                            }
+
+                            &.n3 {
+                                top: -250px;
+                                left: 0px;
+                                border-top: 1000px solid transparent;
+                                border-bottom: 0px solid transparent;
+                                border-left: 0px solid transparent;
+                                border-right: 500px solid #16181c;
+                                transform: translate(230px, 0);
+                            }
+
+                            &.n4 {
+                                top: 250px;
+                                left: 250px;
+                                border-top: 0px solid transparent;
+                                border-bottom: 1000px solid transparent;
+                                border-left: 0px solid transparent;
+                                border-right: 500px solid #131318;
+                                transform: translate(-140px, 200px);
+                            }
+
+                            &.n5 {
+                                top: 250px;
+                                left: -250px;
+                                border-top: 0px solid transparent;
+                                border-bottom: 1000px solid #0f1012;
+                                border-left: 500px solid transparent;
+                                border-right: 500px solid transparent;
+                                transform: translate(-230px, 10px);
+                            }
+
+                            &.n6 {
+                                top: 250px;
+                                left: -250px;
+                                border-top: 0px solid transparent;
+                                border-bottom: 1000px solid transparent;
+                                border-left: 500px solid #101012;
+                                border-right: 0px solid transparent;
+                                transform: translate(-120px, -200px);
+                            }
+                        }
+
+                        .teaser-image {
+                            height: 100%;
+                            width: 100%;
+                            height: inherit;
+                            width: inherit;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+
+                            &.hide {
+                                display: none;
+                            }
                         }
                     }
                 }

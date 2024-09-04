@@ -30,9 +30,9 @@ function Home() {
 
         TEASER_IMAGES.current = $('#camera-shutter .teaser-image');
 
-        setInterval(() => {
-            changeTeaserImage();
-        }, 5000);
+        // setInterval(() => {
+        //     changeTeaserImage();
+        // }, 5000);
     });
 
 
@@ -144,29 +144,33 @@ function Home() {
 
             <main>
                 <div id='teaser-section' className='section'>
-                    <div style={{display: 'none'}}>
+                    <div>
                         <h1>Professional Photos</h1>
 
                         <p>Don't settle for less. Go for the best.</p>
                     </div>
 
-                    <div id='camera-shutter'>
-                        <div id='lens'></div>
+                    <div id='camera'>
+                        <div id="view-finder"></div>
 
-                        <div className='cover n1'></div>
-                        <div className='cover n2'></div>
-                        <div className='cover n3'></div>
-                        <div className='cover n4'></div>
-                        <div className='cover n5'></div>
-                        <div className='cover n6'></div>
+                        <div id='camera-shutter'>
+                            <div id='lens'></div>
 
-                        <div className='teaser-image' style={{backgroundImage: 'url(/images/pexels-trungnguyenphotog-1630860.jpg)'}}></div>
+                            <div className='cover n1'></div>
+                            <div className='cover n2'></div>
+                            <div className='cover n3'></div>
+                            <div className='cover n4'></div>
+                            <div className='cover n5'></div>
+                            <div className='cover n6'></div>
 
-                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-sabel-blanco-662810-2339724.jpg)'}}></div>
+                            <div className='teaser-image' style={{backgroundImage: 'url(/images/pexels-trungnguyenphotog-1630860.jpg)'}}></div>
 
-                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-valeriya-1961794.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-sabel-blanco-662810-2339724.jpg)'}}></div>
 
-                        <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-pixabay-261102.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-valeriya-1961794.jpg)'}}></div>
+
+                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-pixabay-261102.jpg)'}}></div>
+                        </div>
                     </div>
                 </div>
             </main>
