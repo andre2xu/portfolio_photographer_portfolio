@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 
 function Home() {
     // DATA
-    const CAMERA_SHUTTER_COVERS_OPEN_POSITIONS: {[key: string]: (number|JQuery<HTMLElement> | undefined)[]} = {
+    const CAMERA_SHUTTER_COVERS_OPEN_POSITIONS: {[key: string]: Array<number | JQuery<HTMLElement> | undefined>} = {
         n6: [-120, -200, undefined],
         n5: [-240, -12, undefined],
         n4: [-140, 200, undefined],
