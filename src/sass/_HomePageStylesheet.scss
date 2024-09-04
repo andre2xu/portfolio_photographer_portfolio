@@ -42,9 +42,9 @@
 
                         &.n1 {
                             top: -250px;
-                            left: 0;
+                            left: 1px;
                             border-top: 0px solid transparent;
-                            border-bottom: 1000px solid red;
+                            border-bottom: 1000px solid #111213;
                             border-left: 0px solid transparent;
                             border-right: 500px solid transparent;
                             transform: translate(0, -700px);
@@ -53,7 +53,7 @@
                         &.n2 {
                             top: -250px;
                             left: 0;
-                            border-top: 1000px solid blue;
+                            border-top: 1000px solid #101217;
                             border-bottom: 0px solid transparent;
                             border-left: 500px solid transparent;
                             border-right: 500px solid transparent;
@@ -66,7 +66,7 @@
                             border-top: 1000px solid transparent;
                             border-bottom: 0px solid transparent;
                             border-left: 0px solid transparent;
-                            border-right: 500px solid green;
+                            border-right: 500px solid #16181c;
                             transform: translate(230px, 0);
                         }
 
@@ -76,7 +76,7 @@
                             border-top: 0px solid transparent;
                             border-bottom: 1000px solid transparent;
                             border-left: 0px solid transparent;
-                            border-right: 500px solid yellow;
+                            border-right: 500px solid #131318;
                             transform: translate(-140px, 200px);
                         }
 
@@ -84,7 +84,7 @@
                             top: 250px;
                             left: -250px;
                             border-top: 0px solid transparent;
-                            border-bottom: 1000px solid purple;
+                            border-bottom: 1000px solid #0f1012;
                             border-left: 500px solid transparent;
                             border-right: 500px solid transparent;
                             transform: translate(-230px, 10px);
@@ -95,7 +95,7 @@
                             left: -250px;
                             border-top: 0px solid transparent;
                             border-bottom: 1000px solid transparent;
-                            border-left: 500px solid pink;
+                            border-left: 500px solid #101012;
                             border-right: 0px solid transparent;
                             transform: translate(-120px, -200px);
                         }
