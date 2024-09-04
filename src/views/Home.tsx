@@ -10,11 +10,11 @@ function Home() {
     // DATA
     const CAMERA_SHUTTER_COVERS_OPEN_POSITIONS: {[key: string]: (number|JQuery<HTMLElement> | undefined)[]} = {
         n6: [-120, -200, undefined],
-        n5: [-230, 10, undefined],
+        n5: [-240, -12, undefined],
         n4: [-140, 200, undefined],
         n3: [230, 0, undefined],
         n2: [230, 0, undefined],
-        n1: [0, -700, undefined]
+        n1: [0, -200, undefined]
     };
     const CAMERA_SHUTTER_IS_CLOSED: React.MutableRefObject<boolean> = React.useRef(false);
     const TEASER_IMAGES: React.MutableRefObject<JQuery<HTMLElement> | undefined> = React.useRef(undefined);
@@ -31,7 +31,7 @@ function Home() {
         TEASER_IMAGES.current = $('#camera-shutter .teaser-image');
 
         setInterval(() => {
-            changeTeaserImage();
+            toggleCameraShutter();
         }, 5000);
     });
 
@@ -39,100 +39,86 @@ function Home() {
 
     // HELPERS
     function toggleCameraShutter() {
-        for (const COVER in CAMERA_SHUTTER_COVERS_OPEN_POSITIONS) {
-            const DATA: (number | JQuery<HTMLElement> | undefined)[] = CAMERA_SHUTTER_COVERS_OPEN_POSITIONS[COVER];
+        if (CAMERA_SHUTTER_IS_CLOSED.current === false) {
+            // close shutter
 
-            const COVER_ELEMENT: JQuery<HTMLElement> = DATA[2] as JQuery<HTMLElement>;
+            closeCameraShutterCover('n6', 250, closeCameraShutterCover('n5', 260, closeCameraShutterCover('n4', 270, closeCameraShutterCover('n3', 280, closeCameraShutterCover('n2', 290, closeCameraShutterCover('n1', 250, () => { CAMERA_SHUTTER_IS_CLOSED.current = true; changeTeaserImage(); }))))));
+        }
+        else {
+            // open shutter
 
-            const X: number = DATA[0] as number;
-            const Y: number = DATA[1] as number;
-
-            const X_SPEED: number = 5 // ms
-            const Y_SPEED: number = X_SPEED + 45 // ms
-
-            if (CAMERA_SHUTTER_IS_CLOSED.current === false) {
-                // close shutter
-
-                $({x: X}).animate(
-                    {x: 0},
-                    {
-                        duration: X_SPEED,
-                        step: (now) => {
-                            COVER_ELEMENT.css({transform: `translate(${now}px, ${Y}px)`});
-                        },
-                        complete: () => {
-                            $({y: Y}).animate(
-                                {y: 0},
-                                {
-                                    duration: Y_SPEED,
-                                    step: (now) => {
-                                        COVER_ELEMENT.css({transform: `translate(0px, ${now}px)`});
-                                    },
-                                    complete: () => {
-                                        CAMERA_SHUTTER_IS_CLOSED.current = true;
-                                    }
-                                }
-                            );
-                        }
-                    }
-                );
-            }
-            else {
-                // open shutter
-
-                $({y: 0}).animate(
-                    {y: Y},
-                    {
-                        duration: Y_SPEED,
-                        step: (now) => {
-                            COVER_ELEMENT.css({transform: `translate(0px, ${now}px)`});
-                        },
-                        complete: () => {
-                            $({x: 0}).animate(
-                                {x: X},
-                                {
-                                    duration: X_SPEED,
-                                    step: (now) => {
-                                        COVER_ELEMENT.css({transform: `translate(${now}px, ${Y}px)`});
-                                    },
-                                    complete: () => {
-                                        CAMERA_SHUTTER_IS_CLOSED.current = false;
-                                    }
-                                }
-                            );
-                        }
-                    }
-                );
-            }
+            openCameraShutterCover('n1', 250, openCameraShutterCover('n2', 250, openCameraShutterCover('n3', 250, openCameraShutterCover('n4', 200, openCameraShutterCover('n5', 250, openCameraShutterCover('n6', 250, () => { CAMERA_SHUTTER_IS_CLOSED.current = false }))))));
         }
     };
 
+    function closeCameraShutterCover(coverNum: string, duration: number, callback?: any) {
+        if (CAMERA_SHUTTER_COVERS_OPEN_POSITIONS[coverNum] === undefined) {
+            throw RangeError("There's no shutter cover with that number");
+        }
+
+        const DATA: (number | JQuery<HTMLElement> | undefined)[] = CAMERA_SHUTTER_COVERS_OPEN_POSITIONS[coverNum];
+
+        const COVER: JQuery<HTMLElement> = DATA[2] as JQuery<HTMLElement>;
+        const X: number = DATA[0] as number;
+        const Y: number = DATA[1] as number;
+
+        $({x: X, y: Y}).animate(
+            {x: 0, y: 0},
+            {
+                duration: duration,
+                step: function (this: {x: number, y: number}) {
+                    COVER.css({transform: `translate(${Math.round(this.x)}px, ${Math.round(this.y)}px)`});
+                },
+                complete: callback
+            }
+        );
+    };
+
+    function openCameraShutterCover(coverNum: string, duration: number, callback?: any) {
+        if (CAMERA_SHUTTER_COVERS_OPEN_POSITIONS[coverNum] === undefined) {
+            throw RangeError("There's no shutter cover with that number");
+        }
+
+        const DATA: (number | JQuery<HTMLElement> | undefined)[] = CAMERA_SHUTTER_COVERS_OPEN_POSITIONS[coverNum];
+
+        const COVER: JQuery<HTMLElement> = DATA[2] as JQuery<HTMLElement>;
+        const X: number = DATA[0] as number;
+        const Y: number = DATA[1] as number;
+
+        $({x: 0, y: 0}).animate(
+            {x: X, y: Y},
+            {
+                duration: duration,
+                step: function (this: {x: number, y: number}) {
+                    COVER.css({transform: `translate(${Math.round(this.x)}px, ${Math.round(this.y)}px)`});
+                },
+                complete: callback
+            }
+        );
+    };
+
     function changeTeaserImage() {
-        // close
-        toggleCameraShutter();
+        if (TEASER_IMAGES.current !== undefined) {
+            // hide current image
+            TEASER_IMAGES.current.eq(IMAGE_POINTER.current).addClass('hide');
 
-        // open
-        setTimeout(() => {
-            // change image
-            if (TEASER_IMAGES.current !== undefined) {
-                // hide current image
-                TEASER_IMAGES.current.eq(IMAGE_POINTER.current).addClass('hide');
+            // change pointer
+            const LAST_INDEX: number = TEASER_IMAGES.current.length - 1;
 
-                // change pointer
-                const LAST_INDEX: number = TEASER_IMAGES.current.length - 1;
+            IMAGE_POINTER.current += 1;
 
-                IMAGE_POINTER.current += 1;
-
-                if ((IMAGE_POINTER.current <= LAST_INDEX) === false) {
-                    IMAGE_POINTER.current = 0;
-                }
-
-                // display new image
-                TEASER_IMAGES.current.eq(IMAGE_POINTER.current).removeClass('hide');
+            if ((IMAGE_POINTER.current <= LAST_INDEX) === false) {
+                IMAGE_POINTER.current = 0;
             }
 
+            // display new image
+            TEASER_IMAGES.current.eq(IMAGE_POINTER.current).removeClass('hide');
+        }
+
+        setTimeout(() => {
+            // open shutter
             toggleCameraShutter();
-        }, 1000);
+        }, 250);
     };
 
 
