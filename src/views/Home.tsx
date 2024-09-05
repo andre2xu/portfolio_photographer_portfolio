@@ -24,6 +24,8 @@ function Home() {
 
     // EFFECTS
     React.useEffect(() => {
+        // camera animation
+
         for (const COVER in CAMERA_SHUTTER_COVERS_OPEN_POSITIONS) {
             CAMERA_SHUTTER_COVERS_OPEN_POSITIONS[COVER][2] = $(`#camera-shutter .cover.${COVER}`).first();
         }
@@ -33,6 +35,23 @@ function Home() {
         setInterval(() => {
             toggleCameraShutter();
         }, 5000);
+    });
+
+    React.useEffect(() => {
+        // text animations
+
+        $({opacity: 0.0, x_translation: 100}).animate(
+            {opacity: 100.0, x_translation: 0},
+            {
+                duration: 1000,
+                step: function (this: {opacity: number, x_translation: number}) {
+                    $('#teaser-section-text').css({
+                        opacity: this.opacity / 100.0,
+                        transform: `translateX(${this.x_translation}px)`
+                    });
+                }
+            }
+        );
     });
 
 
