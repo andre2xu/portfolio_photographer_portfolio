@@ -210,6 +210,26 @@ function Home() {
                         <p>Mei Z.</p>
                     </article>
                 </div>
+
+                <section id="services-section">
+                    <h1>My Services</h1>
+
+                    <p>I will do photographs for the following. If you want a service that is not included in this list, please contact me and maybe we can arrange something.</p>
+
+                    <div id='services'>
+                        <ul>
+                            <li>Weddings</li>
+                            <li>Products/Advertisements</li>
+                            <li>Class Photos</li>
+                        </ul>
+
+                        <ul>
+                            <li>Passport</li>
+                            <li>Modeling Shoots</li>
+                            <li>Graduation</li>
+                        </ul>
+                    </div>
+                </section>
             </main>
         </div>
     );

@@ -210,6 +210,45 @@
                     }
                 }
             }
+
+            #services-section {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                margin: 0 auto;
+                padding: 80px 0 100px;
+
+                h1 {
+                    margin: 0 auto;
+                    font-family: "PlaywriteCU-Regular", sans-serif;
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                    color: #d2b92b;
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 150%;
+                }
+
+                #services {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 60px;
+
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        list-style: none;
+                        padding: 0;
+
+                        li {
+                            font-size: 20px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
         }
     }
 }
