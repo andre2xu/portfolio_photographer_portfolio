@@ -72,11 +72,13 @@
                     }
 
                     #camera-shutter {
-                        width: 500px;
-                        height: 500px;
+                        $width: 200px; // original = 500px
+                        $height: $width;
+
+                        width: $width;
+                        height: $height;
                         position: relative;
                         overflow: hidden;
-                        // transform: scale(0.94); // NOTE: apply only when the camera background is visible
 
                         #lens {
                             position: absolute;
@@ -100,10 +102,11 @@
                                 top: -150%; // (-750px / 500px BR) * 100
                                 left: 0%;
                                 border-top: 0px solid transparent;
-                                border-bottom: 1000px solid #1e1e1e;
+                                border-bottom: calc($width * 2) solid #1e1e1e;
                                 border-left: 0px solid transparent;
-                                border-right: 500px solid transparent;
-                                transform: translate(0, -200px);
+                                border-right: $height solid transparent;
+                                // transform: translate(0, -200px);
+                                transform: translate(0, -20%); // Y: (-200px / 1000px BB) * 100
                             }
 
                             &.n2 {
@@ -111,11 +114,12 @@
                                 // left: -1px;
                                 top: -50%; // (-250px / 500px BR) * 100
                                 left: -0.001%; // (-1px / 1000px BT) * 100
-                                border-top: 1000px solid #151619;
+                                border-top: calc($width * 2) solid #151619;
                                 border-bottom: 0px solid transparent;
-                                border-left: 500px solid transparent;
-                                border-right: 500px solid transparent;
-                                transform: translate(230px, 0px);
+                                border-left: $height solid transparent;
+                                border-right: $height solid transparent;
+                                // transform: translate(230px, 0px);
+                                transform: translate(23%, 0px); // X: (230px / 1000px BT) * 100
                             }
 
                             &.n3 {
@@ -123,11 +127,12 @@
                                 // left: 0px;
                                 top: -50%; // (-250px / 500px BR) * 100
                                 left: 0%;
-                                border-top: 1000px solid transparent;
+                                border-top: calc($width * 2) solid transparent;
                                 border-bottom: 0px solid transparent;
                                 border-left: 0px solid transparent;
-                                border-right: 500px solid #16181c;
-                                transform: translate(230px, 0);
+                                border-right: $height solid #16181c;
+                                // transform: translate(230px, 0);
+                                transform: translate(46%, 0); // X: (230px / 500px BR) * 100
                             }
 
                             &.n4 {
@@ -136,10 +141,11 @@
                                 top: 50%; // (250px / 500px BR) * 100
                                 left: 25%; // (250px / 1000px BB) * 100
                                 border-top: 0px solid transparent;
-                                border-bottom: 1000px solid transparent;
+                                border-bottom: calc($width * 2) solid transparent;
                                 border-left: 0px solid transparent;
-                                border-right: 500px solid #232329;
-                                transform: translate(-140px, 200px);
+                                border-right: $height solid #232329;
+                                // transform: translate(-140px, 200px);
+                                transform: translate(-28%, 20%); // X: (-140px / 500px BR) * 100, Y: (200px / 1000px BB) * 100
                             }
 
                             &.n5 {
@@ -148,10 +154,11 @@
                                 top: 50%; // (250px / 500px BR) * 100
                                 left: -50.4%; // (-252px / 500px BL) * 100
                                 border-top: 0px solid transparent;
-                                border-bottom: 1000px solid #1a1b1d;
-                                border-left: 500px solid transparent;
-                                border-right: 500px solid transparent;
-                                transform: translate(-240px, -12px);
+                                border-bottom: calc($width * 2) solid #1a1b1d;
+                                border-left: $height solid transparent;
+                                border-right: $height solid transparent;
+                                // transform: translate(-240px, -12px);
+                                transform: translate(-24%, -1.2%); // X: (-240px / 1000px BB) * 100, Y: (-12px / 1000px BB) * 100
                             }
 
                             &.n6 {
@@ -160,10 +167,11 @@
                                 top: 50%; // (250px / 500px BL) * 100
                                 left: -50%; // (-250px / 500px BL) * 100
                                 border-top: 0px solid transparent;
-                                border-bottom: 1000px solid transparent;
-                                border-left: 500px solid #17171a;
+                                border-bottom: calc($width * 2) solid transparent;
+                                border-left: $height solid #17171a;
                                 border-right: 0px solid transparent;
-                                transform: translate(-120px, -200px);
+                                // transform: translate(-120px, -200px);
+                                transform: translate(-24%, -20%); // X: (-120px / 500px BL) * 100, Y: (-200px / 1000px BB) * 100
                             }
                         }
 

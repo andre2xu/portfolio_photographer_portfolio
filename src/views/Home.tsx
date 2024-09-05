@@ -9,12 +9,12 @@ import Navbar from '../components/Navbar';
 function Home() {
     // DATA
     const CAMERA_SHUTTER_COVERS_OPEN_POSITIONS: {[key: string]: Array<number | JQuery<HTMLElement> | undefined>} = {
-        n6: [-120, -200, undefined],
-        n5: [-240, -12, undefined],
-        n4: [-140, 200, undefined],
-        n3: [230, 0, undefined],
-        n2: [230, 0, undefined],
-        n1: [0, -200, undefined]
+        n6: [-24, -20, undefined],
+        n5: [-24, -1.2, undefined],
+        n4: [-28, 20, undefined],
+        n3: [46, 0, undefined],
+        n2: [23, 0, undefined],
+        n1: [0, -20, undefined]
     };
     const CAMERA_SHUTTER_IS_CLOSED: React.MutableRefObject<boolean> = React.useRef(false);
     const TEASER_IMAGES: React.MutableRefObject<JQuery<HTMLElement> | undefined> = React.useRef(undefined);
@@ -102,7 +102,7 @@ function Home() {
             {
                 duration: duration,
                 step: function (this: {x: number, y: number}) {
-                    COVER.css({transform: `translate(${Math.round(this.x)}px, ${Math.round(this.y)}px)`});
+                    COVER.css({transform: `translate(${Math.round(this.x)}%, ${Math.round(this.y)}%)`});
                 },
                 complete: callback
             }
@@ -125,7 +125,7 @@ function Home() {
             {
                 duration: duration,
                 step: function (this: {x: number, y: number}) {
-                    COVER.css({transform: `translate(${Math.round(this.x)}px, ${Math.round(this.y)}px)`});
+                    COVER.css({transform: `translate(${Math.round(this.x)}%, ${Math.round(this.y)}%)`});
                 },
                 complete: callback
             }
