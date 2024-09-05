@@ -96,8 +96,9 @@
                             background-color: transparent;
 
                             &.n1 {
-                                top: -750px;
-                                left: 0px;
+                                // top: -750px;
+                                top: -150%; // (-750px / 500px BR) * 100
+                                left: 0%;
                                 border-top: 0px solid transparent;
                                 border-bottom: 1000px solid #1e1e1e;
                                 border-left: 0px solid transparent;
@@ -106,8 +107,10 @@
                             }
 
                             &.n2 {
-                                top: -250px;
-                                left: -1px;
+                                // top: -250px;
+                                // left: -1px;
+                                top: -50%; // (-250px / 500px BR) * 100
+                                left: -0.001%; // (-1px / 1000px BT) * 100
                                 border-top: 1000px solid #151619;
                                 border-bottom: 0px solid transparent;
                                 border-left: 500px solid transparent;
@@ -116,8 +119,10 @@
                             }
 
                             &.n3 {
-                                top: -250px;
-                                left: 0px;
+                                // top: -250px;
+                                // left: 0px;
+                                top: -50%; // (-250px / 500px BR) * 100
+                                left: 0%;
                                 border-top: 1000px solid transparent;
                                 border-bottom: 0px solid transparent;
                                 border-left: 0px solid transparent;
@@ -126,8 +131,10 @@
                             }
 
                             &.n4 {
-                                top: 250px;
-                                left: 250px;
+                                // top: 250px;
+                                // left: 250px;
+                                top: 50%; // (250px / 500px BR) * 100
+                                left: 25%; // (250px / 1000px BB) * 100
                                 border-top: 0px solid transparent;
                                 border-bottom: 1000px solid transparent;
                                 border-left: 0px solid transparent;
@@ -136,8 +143,10 @@
                             }
 
                             &.n5 {
-                                top: 250px;
-                                left: -252px;
+                                // top: 250px;
+                                // left: -252px;
+                                top: 50%; // (250px / 500px BR) * 100
+                                left: -50.4%; // (-252px / 500px BL) * 100
                                 border-top: 0px solid transparent;
                                 border-bottom: 1000px solid #1a1b1d;
                                 border-left: 500px solid transparent;
@@ -146,8 +155,10 @@
                             }
 
                             &.n6 {
-                                top: 250px;
-                                left: -250px;
+                                // top: 250px;
+                                // left: -250px;
+                                top: 50%; // (250px / 500px BL) * 100
+                                left: -50%; // (-250px / 500px BL) * 100
                                 border-top: 0px solid transparent;
                                 border-bottom: 1000px solid transparent;
                                 border-left: 500px solid #17171a;
@@ -204,9 +215,6 @@
                                 outline-color: #fff;
                             }
                         }
-
-                        // styles
-                        transform: scale(0.4) translateY(-320px);
                     }
                 }
             }
