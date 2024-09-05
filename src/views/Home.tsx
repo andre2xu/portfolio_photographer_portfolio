@@ -32,9 +32,9 @@ function Home() {
 
         TEASER_IMAGES.current = $('#camera-shutter .teaser-image');
 
-        setInterval(() => {
-            toggleCameraShutter();
-        }, 5000);
+        // setInterval(() => {
+        //     toggleCameraShutter();
+        // }, 5000);
     });
 
     React.useEffect(() => {
@@ -168,13 +168,13 @@ function Home() {
                             <div className='cover n5'></div>
                             <div className='cover n6'></div>
 
-                            <div className='teaser-image' style={{backgroundImage: 'url(/images/pexels-trungnguyenphotog-1630860.jpg)'}}></div>
+                            <div className='teaser-image' style={{backgroundImage: 'url(/images/teasers/pexels-trungnguyenphotog-1630860.jpg)'}}></div>
 
-                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-sabel-blanco-662810-2339724.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/teasers/pexels-sabel-blanco-662810-2339724.jpg)'}}></div>
 
-                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-valeriya-1961794.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/teasers/pexels-valeriya-1961794.jpg)'}}></div>
 
-                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/pexels-pixabay-261102.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/teasers/pexels-pixabay-261102.jpg)'}}></div>
                         </div>
                     </div>
                 </div>
