@@ -179,7 +179,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div id='testimonials-section' className='section'>
+                <div id='testimonials-section' className='section' style={{display: 'none'}}>
                     <article className='testimonial'>
                         <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-hannah-nelson-390257-1456951.jpg)'}}></div>
 
@@ -211,7 +211,7 @@ function Home() {
                     </article>
                 </div>
 
-                <section id="services-section">
+                <section id="services-section" style={{display: 'none'}}>
                     <h1>My Services</h1>
 
                     <p>I will do photographs for the following. If you want a service that is not included in this list, please contact me and maybe we can arrange something.</p>
