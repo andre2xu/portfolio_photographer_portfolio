@@ -14,17 +14,17 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                padding: 150px 0 100px;
+                // padding: 150px 0 100px;
 
                 #teaser-section-text {
                     h1 {
                         font-family: "PlaywriteCU-Regular", sans-serif;
-                        font-size: 40px;
+                        // font-size: 40px;
                     }
 
                     p {
                         font-family: serif;
-                        font-size: 24px;
+                        // font-size: 24px;
                     }
                 }
 
@@ -35,38 +35,40 @@
                     justify-content: center;
                     align-items: center;
                     background-color: $camera_bg;
-                    padding: 100px 270px 50px;
-                    border-radius: 50px;
-                    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+                    // padding: 100px 270px 50px;
+                    // border-radius: 50px;
+                    // box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
                     position: relative;
-                    margin-left: 150px;
+                    // margin-left: 150px;
+                    backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
 
-                    &.hide {
-                        background-color: transparent;
-                        border-color: transparent;
-                        box-shadow: none;
+                    // &.hide {
+                    //     background-color: transparent;
+                    //     border-color: transparent;
+                    //     box-shadow: none;
 
-                        #view-finder {
-                            display: none;
-                        }
+                    //     #view-finder {
+                    //         display: none;
+                    //     }
 
-                        #camera-shutter {
-                            #lens {
-                                outline-color: #fff;
-                            }
-                        }
-                    }
+                    //     #camera-shutter {
+                    //         #lens {
+                    //             outline-color: #fff;
+                    //         }
+                    //     }
+                    // }
 
                     #view-finder {
-                        width: 500px;
-                        height: 250px;
+                        // width: 500px;
+                        // height: 250px;
                         position: absolute;
-                        top: -14%;
-                        left: 50%;
+                        // top: -14%;
+                        // left: 50%;
                         transform: translateX(-50%);
                         background-color: $camera_bg;
-                        border-top-left-radius: 100px;
-                        border-top-right-radius: 100px;
+                        // border-top-left-radius: 100px;
+                        // border-top-right-radius: 100px;
                     }
 
                     #camera-shutter {
@@ -74,7 +76,7 @@
                         height: 500px;
                         position: relative;
                         overflow: hidden;
-                        transform: scale(0.94);
+                        // transform: scale(0.94); // NOTE: apply only when the camera background is visible
 
                         #lens {
                             position: absolute;
@@ -157,8 +159,6 @@
                         .teaser-image {
                             height: 100%;
                             width: 100%;
-                            height: inherit;
-                            width: inherit;
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: cover;
@@ -167,6 +167,46 @@
                                 display: none;
                             }
                         }
+                    }
+                }
+
+                // RESPONSIVENESS
+                @media screen and (min-width: 250px) {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    #teaser-section-text {
+                        text-align: center;
+                        margin-top: 30px;
+
+                        h1 {
+                            font-size: 18px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+
+                    #camera {
+                        // hide camera background
+                        background-color: #fff;
+                        border-color: transparent;
+                        box-shadow: none;
+
+                        #view-finder {
+                            display: none;
+                        }
+
+                        #camera-shutter {
+                            #lens {
+                                outline-color: #fff;
+                            }
+                        }
+
+                        // styles
+                        transform: scale(0.4) translateY(-320px);
                     }
                 }
             }
