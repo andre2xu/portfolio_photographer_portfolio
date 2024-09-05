@@ -173,52 +173,40 @@
 
             #testimonials-section {
                 background-color: #eeeeee;
-                padding: 20px 50px 40px;
+                padding: 80px 50px 40px;
                 margin-top: 50px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
 
-                h1 {
-                    text-align: center;
-                    font-family: "PlaywriteCU-Regular", sans-serif;
-                    margin-bottom: 60px;
-                    color: #656565;
-                    font-size: 32px;
-                    text-decoration: underline;
-                }
-
-                #testimonials {
+                .testimonial {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     align-items: center;
+                    justify-content: center;
 
-                    .testimonial {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
+                    &:not(:last-child) {
+                        margin-right: 100px;
+                    }
 
-                        &:not(:last-child) {
-                            margin-right: 100px;
-                        }
+                    .client-picture {
+                        width: 300px;
+                        height: 300px;
+                        border-radius: 50%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        margin-bottom: 50px;
+                    }
 
-                        .client-picture {
-                            width: 300px;
-                            height: 300px;
-                            border-radius: 50%;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                            margin-bottom: 50px;
-                        }
+                    q {
+                        margin-bottom: 30px;
+                        font-size: 18px;
+                    }
 
-                        q {
-                            margin-bottom: 30px;
-                            font-size: 18px;
-                        }
-
-                        p {
-                            font-size: 20px;
-                            font-style: italic;
-                        }
+                    p {
+                        font-size: 20px;
+                        font-style: italic;
                     }
                 }
             }
