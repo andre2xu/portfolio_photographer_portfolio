@@ -40,18 +40,34 @@ function Home() {
     React.useEffect(() => {
         // text animations
 
-        $({opacity: 0.0, x_translation: 100}).animate(
-            {opacity: 100.0, x_translation: 0},
-            {
-                duration: 1000,
-                step: function (this: {opacity: number, x_translation: number}) {
-                    $('#teaser-section-text').css({
-                        opacity: this.opacity / 100.0,
-                        transform: `translateX(${this.x_translation}px)`
-                    });
+        if (window.innerWidth >= 900) {
+            $({opacity: 0.0, translation: 100}).animate(
+                {opacity: 100.0, translation: 0},
+                {
+                    duration: 1000,
+                    step: function (this: {opacity: number, translation: number}) {
+                        $('#teaser-section-text').css({
+                            opacity: this.opacity / 100.0,
+                            transform: `translateX(${this.translation}px)`
+                        });
+                    }
                 }
-            }
-        );
+            );
+        }
+        else if (window.innerWidth >= 250 && window.innerWidth < 900) {
+            $({opacity: 0.0, translation: -40}).animate(
+                {opacity: 100.0, translation: 0},
+                {
+                    duration: 600,
+                    step: function (this: {opacity: number, translation: number}) {
+                        $('#teaser-section-text').css({
+                            opacity: this.opacity / 100.0,
+                            transform: `translateY(${this.translation}px)`
+                        });
+                    }
+                }
+            );
+        }
     });
 
 
