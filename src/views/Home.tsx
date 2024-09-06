@@ -41,7 +41,7 @@ function Home() {
         // text animations
 
         if (window.innerWidth >= 900) {
-            $({opacity: 0.0, translation: 100}).animate(
+            $({opacity: 0.0, translation: 50}).animate(
                 {opacity: 100.0, translation: 0},
                 {
                     duration: 1000,

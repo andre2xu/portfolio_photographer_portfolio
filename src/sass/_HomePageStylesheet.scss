@@ -74,30 +74,20 @@
                 }
 
                 #camera {
-                    $camera_bg: #25282d;
+                    $camera_bg: #fff;
 
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     background-color: $camera_bg;
-                    // padding: 100px 270px 50px;
-                    // border-radius: 50px;
-                    // box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
                     position: relative;
-                    // margin-left: 150px;
                     backface-visibility: hidden;
                     -webkit-backface-visibility: hidden;
 
                     #view-finder {
-                        // width: 500px;
-                        // height: 250px;
                         position: absolute;
-                        // top: -14%;
-                        // left: 50%;
                         transform: translateX(-50%);
                         background-color: $camera_bg;
-                        // border-top-left-radius: 100px;
-                        // border-top-right-radius: 100px;
                     }
 
                     #camera-shutter {
@@ -354,6 +344,39 @@
                         margin-left: 150px;
 
                         @include cameraShutterSize(500px);
+                    }
+                }
+
+                @media screen and (min-width: 1800px) {
+                    #camera {
+                        $camera_bg: #25282d;
+
+                        // display camera background
+                        background-color: $camera_bg;
+                        border-color: $camera_bg;
+                        border-radius: 50px;
+                        box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+                        padding: 130px 300px 50px;
+
+                        #view-finder {
+                            display: block;
+                            width: 500px;
+                            height: 250px;
+                            top: -14%;
+                            left: 50%;
+                            border-top-left-radius: 100px;
+                            border-top-right-radius: 100px;
+                            background-color: $camera_bg;
+                        }
+
+                        #camera-shutter {
+                            #lens {
+                                outline-color: $camera_bg;
+                            }
+                        }
+
+                        // styles
+                        @include cameraShutterSize(450px);
                     }
                 }
             }
