@@ -142,7 +142,7 @@ function Home() {
 
             IMAGE_POINTER.current += 1;
 
-            if ((IMAGE_POINTER.current <= LAST_INDEX) === false) {
+            if (IMAGE_POINTER.current > LAST_INDEX) {
                 IMAGE_POINTER.current = 0;
             }
 
