@@ -62,17 +62,14 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                // padding: 150px 0 100px;
 
                 #teaser-section-text {
                     h1 {
                         font-family: "PlaywriteCU-Regular", sans-serif;
-                        // font-size: 40px;
                     }
 
                     p {
                         font-family: serif;
-                        // font-size: 24px;
                     }
                 }
 
@@ -258,6 +255,105 @@
 
                         // styles
                         margin-top: 25px;
+                    }
+                }
+
+                @media screen and (min-width: 350px) {
+                    #teaser-section-text {
+                        margin-top: 30px;
+
+                        h1 {
+                            font-size: 20px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+
+                    #camera {
+                        @include cameraShutterSize(250px);
+                    }
+                }
+
+                @media screen and (min-width: 450px) {
+                    #teaser-section-text {
+                        margin-top: 30px;
+
+                        h1 {
+                            font-size: 24px;
+                        }
+
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+
+                    #camera {
+                        margin-top: 35px;
+
+                        @include cameraShutterSize(300px);
+                    }
+                }
+
+                @media screen and (min-width: 650px) {
+                    #teaser-section-text {
+                        margin-top: 50px;
+
+                        h1 {
+                            font-size: 30px;
+                        }
+
+                        p {
+                            font-size: 25px;
+                        }
+                    }
+
+                    #camera {
+                        margin-top: 50px;
+
+                        @include cameraShutterSize(350px);
+                    }
+                }
+
+                @media screen and (min-width: 900px) {
+                    flex-direction: row;
+                    padding: 150px 0 100px;
+
+                    #teaser-section-text {
+                        margin: 0;
+                        text-align: left;
+                    }
+
+                    #camera {
+                        margin: 0;
+                        margin-left: 60px;
+                    }
+                }
+
+                @media screen and (min-width: 1200px) {
+                    #teaser-section-text {
+                        h1 {
+                            font-size: 40px;
+                        }
+
+                        p {
+                            font-size: 24px;
+                        }
+                    }
+
+                    #camera {
+                        margin-left: 100px;
+
+                        @include cameraShutterSize(400px);
+                    }
+                }
+
+                @media screen and (min-width: 1400px) {
+                    #camera {
+                        margin-left: 150px;
+
+                        @include cameraShutterSize(500px);
                     }
                 }
             }
