@@ -195,7 +195,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div id='testimonials-section' className='section' style={{display: 'none'}}>
+                <div id='testimonials-section' className='section'>
                     <article className='testimonial'>
                         <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-hannah-nelson-390257-1456951.jpg)'}}></div>
 
