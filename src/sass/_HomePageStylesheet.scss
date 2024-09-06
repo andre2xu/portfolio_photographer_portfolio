@@ -685,6 +685,35 @@
                         }
                     }
                 }
+
+                @media screen and (min-width: 2000px) {
+                    margin-top: 3.5vw;
+                    max-width: 50vw;
+
+                    h1 {
+                        font-size: 1.5vw;
+                    }
+
+                    p {
+                        font-size: 1.1vw;
+                        margin-top: 1vw;
+                        margin-bottom: 4vw;
+                    }
+
+                    #services {
+                        ul {
+                            margin-bottom: 1vw;
+
+                            li {
+                                font-size: 1.1vw;
+
+                                &:not(:last-child) {
+                                    margin-right: 4vw;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
