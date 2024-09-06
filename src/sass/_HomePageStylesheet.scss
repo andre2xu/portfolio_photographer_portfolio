@@ -379,6 +379,39 @@
                         @include cameraShutterSize(450px);
                     }
                 }
+
+                @media screen and (min-width: 2000px) {
+                    padding: 7.5vw 0 5vw;
+
+                    #teaser-section-text {
+                        h1 {
+                            font-size: 2vw;
+                        }
+
+                        p {
+                            font-size: 1.2vw;
+                        }
+                    }
+
+                    #camera {
+                        margin-left: 7.5vw;
+                        border-radius: 4.76% / 7.9365%; // ((50px / width) * 100) / ((50px / height) * 100)  NOTE: look at the dimensions of the target element for screen width 1800px in Chrome's developer console
+                        box-shadow: 0.5vw 0.5vw 0.5vw rgba(0,0,0,0.5);
+                        padding: 6.5vw 15vw 2.5vw;
+
+                        #view-finder {
+                            width: 25vw;
+                            height: 12.5vw;
+                            top: -14%;
+                            left: 50%;
+                            border-top-left-radius: 20% / 40%; // see formula above
+                            border-top-right-radius: 20% / 40%; // see formula above
+                        }
+
+                        // styles
+                        @include cameraShutterSize(22.5vw);
+                    }
+                }
             }
 
             #testimonials-section {
