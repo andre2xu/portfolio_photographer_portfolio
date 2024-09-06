@@ -494,7 +494,7 @@
                 @media screen and (min-width: 1200px) {
                     flex-direction: row;
                     align-items: flex-start;
-                    padding: 100px 80px 80px;
+                    padding: 100px 80px 40px;
 
                     .testimonial {
                         margin: 0;
@@ -507,6 +507,7 @@
 
                         q {
                             width: 100%;
+                            margin-bottom: 50px;
                             max-width: none;
                         }
 
@@ -521,6 +522,31 @@
                         .client-picture {
                             width: 250px;
                             height: 250px;
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 2000px) {
+                    padding: 5vw 4vw 2vw;
+
+                    .testimonial {
+                        .client-picture {
+                            width: 12.5vw;
+                            height: 12.5vw;
+                            margin-bottom: 2.5vw;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 5vw;
+                        }
+
+                        q {
+                            font-size: 0.9vw;
+                            margin-bottom: 2.5vw;
+                        }
+
+                        p {
+                            font-size: 1vw;
                         }
                     }
                 }
