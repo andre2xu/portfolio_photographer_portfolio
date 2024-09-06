@@ -1,3 +1,51 @@
+@mixin cameraShutterSize($size) {
+    #camera-shutter {
+        $width: $size;
+        $height: $width;
+
+        width: $width;
+        height: $height;
+
+        #lens {
+            outline-width: calc($width / 2);
+        }
+
+        .cover {
+            &.n1 {
+                border-bottom-width: calc($width * 2);
+                border-right-width: $height;
+            }
+
+            &.n2 {
+                border-top-width: calc($width * 2);
+                border-left-width: $height;
+                border-right-width: $height;
+            }
+
+            &.n3 {
+                border-top-width: calc($width * 2);
+                border-right-width: $height;
+            }
+
+            &.n4 {
+                border-bottom-width: calc($width * 2);
+                border-right-width: $height;
+            }
+
+            &.n5 {
+                border-bottom-width: calc($width * 2);
+                border-left-width: $height;
+                border-right-width: $height;
+            }
+
+            &.n6 {
+                border-bottom-width: calc($width * 2);
+                border-left-width: $height;
+            }
+        }
+    }
+}
+
 @mixin HomePageStylesheet() {
     #home-page {
         height: 100vh;
@@ -87,7 +135,7 @@
                             width: inherit;
                             height: inherit;
                             border-radius: 50%;
-                            outline: solid 250px $camera_bg;
+                            outline: solid calc($width / 2) $camera_bg;
                             z-index: 2;
                         }
 
