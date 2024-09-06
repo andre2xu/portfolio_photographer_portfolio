@@ -77,7 +77,7 @@ function Home() {
         if (CAMERA_SHUTTER_IS_CLOSED.current === false) {
             // close shutter
 
-            closeCameraShutterCover('n6', 250, closeCameraShutterCover('n5', 260, closeCameraShutterCover('n4', 270, closeCameraShutterCover('n3', 280, closeCameraShutterCover('n2', 290, closeCameraShutterCover('n1', 250, () => { CAMERA_SHUTTER_IS_CLOSED.current = true; changeTeaserImage(); }))))));
+            closeCameraShutterCover('n6', 250, closeCameraShutterCover('n5', 270, closeCameraShutterCover('n4', 270, closeCameraShutterCover('n3', 280, closeCameraShutterCover('n2', 290, closeCameraShutterCover('n1', 250, () => { CAMERA_SHUTTER_IS_CLOSED.current = true; changeTeaserImage(); }))))));
         }
         else {
             // open shutter
