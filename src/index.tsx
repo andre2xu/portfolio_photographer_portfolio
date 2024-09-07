@@ -5,14 +5,15 @@ import {
 } from 'react-router-dom';
 
 // views
-import Home from './views/Home';
+// import Home from './views/Home';
+import AboutMe from './views/AboutMe';
 
 
 
 const ROUTER = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    element: <AboutMe /> // temp
   }
 ]);
 
