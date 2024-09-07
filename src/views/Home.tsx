@@ -33,9 +33,9 @@ function Home() {
 
         TEASER_IMAGES.current = $('#camera-shutter .teaser-image');
 
-        // setInterval(() => {
-        //     toggleCameraShutter();
-        // }, 5000);
+        setInterval(() => {
+            toggleCameraShutter();
+        }, 5000);
     });
 
     React.useEffect(() => {
