@@ -3,6 +3,7 @@ import $ from 'jquery';
 
 // shared components
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 
@@ -247,6 +248,8 @@ function Home() {
                     </div>
                 </section>
             </main>
+
+            <Footer />
         </div>
     );
 };
