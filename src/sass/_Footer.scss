@@ -1,0 +1,206 @@
+@mixin Footer() {
+    footer {
+        display: flex;
+        background-color: #191a1c;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+
+        #footer-sitemap {
+            display: flex;
+            flex-direction: column;
+
+            ul {
+                margin: 0 auto;
+            }
+        }
+
+        #footer-info {
+            display: flex;
+            flex-direction: column;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        // RESPONSIVENESS
+        @media screen and (min-width: 250px) {
+            padding: 40px 0;
+            flex-direction: column;
+
+            #footer-sitemap {
+                border-bottom: thin solid #3a3b3f;
+                padding-bottom: 30px;
+                margin: 0 20px;
+                font-size: 16px;
+
+                ul li {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+            }
+
+            #footer-info {
+                margin: 0 auto;
+                margin-top: 20px;
+                font-size: 16px;
+                width: 80%;
+
+                & > p {
+                    margin-bottom: 50px;
+                }
+
+                ul {
+                    li {
+                        margin-bottom: 10px;
+
+                        &:last-child {
+                            margin-top: 50px;
+                        }
+
+                        p {
+                            margin: 0;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            #footer-info {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+
+                ul {
+                    li:last-child {
+                        margin: 30px auto;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            flex-direction: row;
+            padding: 40px 0;
+
+            #footer-sitemap {
+                border: none;
+                margin: auto 0;
+                padding: 0 40px;
+                width: 50%;
+
+                #footer-legal-links {
+                    li:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            #footer-info {
+                margin-top: 0;
+                padding: 0 40px;
+                width: 100%;
+                align-items: flex-start;
+                border-left: thin solid #3a3b3f;
+
+                & > p {
+                    margin-top: 0;
+                }
+
+                ul li:last-child {
+                    margin: 0;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        @media screen and (min-width: 750px) {
+            #footer-sitemap {
+                flex-direction: row;
+                justify-content: center;
+                padding: 0 20px;
+                width: 50%;
+
+                ul li {
+                    text-align: left;
+                    margin-bottom: 30px;
+                }
+
+                #footer-page-links {
+                    margin: 0;
+                    margin-right: 50px;
+                }
+
+                #footer-legal-links {
+                    margin: 0;
+                }
+            }
+
+            #footer-info {
+                width: 50%;
+                padding: 0;
+                padding-left: 40px;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            #footer-sitemap {
+                width: 90%;
+                flex-direction: column;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+
+                    li {
+                        margin-bottom: 0;
+                        font-size: 20px;
+
+                        &:not(:last-child) {
+                            margin-right: 60px;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                #footer-page-links {
+                    margin: 0 auto;
+                    margin-bottom: 60px;
+                }
+
+                #footer-legal-links {
+                    margin: 0 auto;
+                }
+            }
+
+            #footer-info {
+                width: 50%;
+                padding-left: 50px;
+            }
+        }
+    }
+}
