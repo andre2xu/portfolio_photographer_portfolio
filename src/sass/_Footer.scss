@@ -70,6 +70,8 @@
                 }
 
                 ul {
+                    margin-bottom: 40px;
+
                     li {
                         margin-bottom: 10px;
 
@@ -102,7 +104,6 @@
 
         @media screen and (min-width: 600px) {
             flex-direction: row;
-            padding: 40px 0;
 
             #footer-sitemap {
                 border: none;
@@ -231,6 +232,8 @@
                 }
 
                 ul {
+                    margin-bottom: 2vw;
+
                     li {
                         margin-bottom: 0.5vw;
 
