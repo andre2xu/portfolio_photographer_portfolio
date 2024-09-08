@@ -2,6 +2,7 @@
 @import 'Footer';
 @import 'HomePageStylesheet';
 @import 'AboutMePageStylesheet';
+@import 'ContactPageStylesheet.scss';
 
 @font-face {
     font-family: PlaywriteCU-Regular;
@@ -23,6 +24,8 @@ body {
         @include HomePageStylesheet();
 
         @include AboutMePageStylesheet();
+
+        @include ContactPageStylesheet();
     }
 
     @media screen and (max-width: 249px) {
