@@ -9,12 +9,10 @@
             margin-top: 50px;
             margin-bottom: 100px;
 
-            #about-me-story {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin: 0 auto;
+            section {
                 width: 40%;
+                margin: 0 auto;
+                margin-bottom: 50px;
                 font-family: Arial, Helvetica, sans-serif;
 
                 h1 {
@@ -27,10 +25,18 @@
                 }
 
                 p {
-                    font-size: 16px;
                     line-height: 150%;
+                    font-size: 16px;
                     text-align: justify;
+                }
+            }
 
+            #about-me-story {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                p {
                     #about-me-self-portrait {
                         float: right;
                         margin-left: 20px;

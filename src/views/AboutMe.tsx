@@ -21,6 +21,14 @@ function AboutMe() {
                         When I'm not behind the camera, I'm usually out hiking, kayaking, or just exploring new places. I'm also a huge fan of cooking. There's something about experimenting with flavors that reminds me of playing with light and composition in my work. Photography has allowed me to combine my love for adventure, creativity, and storytelling, and I can't imagine doing anything else.
                     </p>
                 </section>
+
+                <section id='about-me-protos'>
+                    <h1><span>Protos</span> &#x1F4F7;</h1>
+
+                    <p>
+                        My photography business, Protos, is still in its early stages, but it's already starting to take shape. Right now, it's just me handling all the photography, along with a talented web developer who built and maintains the site for me. I'm proud of what we've accomplished so far, but I know there's a lot more potential. I'm actively looking for experts who can help with the business and marketing side of things to help Protos grow and reach more people. My mission with Protos is simple: to offer professional, high-quality photography that's affordable for everyone, whether it's for personal projects, events, or businesses looking for great visuals.
+                    </p>
+                </section>
             </main>
 
             <Footer />
