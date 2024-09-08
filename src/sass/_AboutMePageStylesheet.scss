@@ -2,6 +2,47 @@
     #about-me-page {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        height: 100vh;
+        overflow-y: auto;
+
+        main {
+            #about-me-story {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+
+                section {
+                    width: 40%;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                    h1 {
+                        font-size: 32px;
+
+                        span {
+                            font-style: italic;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        line-height: 150%;
+                        text-align: justify;
+
+                        #about-me-self-portrait {
+                            float: right;
+                            margin-left: 20px;
+                            margin-bottom: 10px;
+                            width: 300px;
+                            height: 300px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
