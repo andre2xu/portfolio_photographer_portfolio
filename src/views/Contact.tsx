@@ -1,3 +1,6 @@
+import React from 'react';
+import $ from 'jquery';
+
 // shared components
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -5,6 +8,55 @@ import Footer from '../components/Footer';
 
 
 function Contact() {
+    // DATA
+    const CFD_IS_EXPANDED: React.MutableRefObject<boolean> = React.useRef(false);
+
+
+
+    // HELPERS
+    function toggleContactFormDropdown() {
+        const DROPDOWN_BUTTON_ARROW: JQuery<HTMLElement> = $('.dropdown-button .arrow').first();
+        const DROPDOWN_MENU: JQuery<HTMLElement> = $('.dropdown-menu').first();
+
+        if (CFD_IS_EXPANDED.current === false) {
+            // expand dropdown
+            DROPDOWN_MENU.removeClass('hide');
+
+            $({rotation: 0}).animate(
+                {rotation: 180},
+                {
+                    duration: 200,
+                    step: (now) => {
+                        DROPDOWN_BUTTON_ARROW.css({transform: `rotate(${now}deg)`});
+                    },
+                    complete: () => {
+                        CFD_IS_EXPANDED.current = true;
+                    }
+                }
+            );
+        }
+        else {
+            // collapse dropdown
+            DROPDOWN_MENU.addClass('hide');
+
+            $({rotation: 180}).animate(
+                {rotation: 0},
+                {
+                    duration: 200,
+                    step: (now) => {
+                        DROPDOWN_BUTTON_ARROW.css({transform: `rotate(${now}deg)`});
+                    },
+                    complete: () => {
+                        CFD_IS_EXPANDED.current = false;
+                    }
+                }
+            );
+        }
+    };
+
+
+
+    // HTML
     return (
         <div id='contact-page'>
             <Navbar />
@@ -35,7 +87,7 @@ function Contact() {
                         <span className='label'>Service</span>
 
                         <div className='dropdown-container'>
-                            <div className='dropdown-button'>
+                            <div className='dropdown-button' onClick={toggleContactFormDropdown}>
                                 <span>Wedding</span>
 
                                 <div className='arrow'>
@@ -44,7 +96,7 @@ function Contact() {
                                 </div>
                             </div>
 
-                            <ul className='dropdown-menu'>
+                            <ul className='dropdown-menu hide'>
                                 <li>Wedding</li>
                                 <li>Business</li>
                                 <li>Class Photo</li>
