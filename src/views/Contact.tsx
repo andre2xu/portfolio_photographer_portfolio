@@ -54,6 +54,13 @@ function Contact() {
         }
     };
 
+    function selectService(event: any) {
+        $('.dropdown-button span').text(event.target.innerText);
+
+        // close dropdown
+        toggleContactFormDropdown();
+    };
+
 
 
     // HTML
@@ -96,7 +103,7 @@ function Contact() {
                                 </div>
                             </div>
 
-                            <ul className='dropdown-menu hide'>
+                            <ul className='dropdown-menu hide' onClick={(event) => selectService(event)}>
                                 <li>Wedding</li>
                                 <li>Business</li>
                                 <li>Class Photo</li>
