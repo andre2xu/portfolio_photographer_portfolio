@@ -13,32 +13,19 @@
             height: 100%;
             width: 100%;
             font-family: Arial, Helvetica, sans-serif;
-            padding: 100px 0;
 
             form {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                min-width: 400px;
-                padding: 40px;
                 background-color: #fdfdfd;
                 border: thin solid #e2e2e2;
-                box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
 
                 .form-field {
-                    margin-bottom: 30px;
                     display: flex;
                     flex-direction: column;
 
-                    label, .label {
-                        margin-bottom: 10px;
-                        font-size: 16px;
-                    }
-
                     input {
-                        padding: 5px;
-                        font-size: 14px;
-
                         &:focus {
                             outline: none;
                         }
@@ -46,9 +33,6 @@
 
                     textarea {
                         resize: none;
-                        padding: 10px;
-                        height: 100px;
-                        font-size: 14px;
 
                         &:focus {
                             outline: none;
@@ -61,17 +45,10 @@
                             display: flex;
                             flex-direction: row;
                             align-items: center;
-                            padding: 5px 10px;
                             border: thin solid #b1aeae;
                             cursor: pointer;
 
-                            span {
-                                font-size: 16px;
-                            }
-
                             .arrow {
-                                width: 25px;
-                                height: 25px;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -79,23 +56,12 @@
 
                                 .arrow-line {
                                     width: 100%;
-                                    height: 2px;
                                     background-color: #838080;
-
-                                    &:first-child {
-                                        transform: rotate(35deg) translateX(1px);
-                                    }
-
-                                    &:last-child {
-                                        transform: rotate(-35deg) translateX(-2px);
-                                    }
                                 }
                             }
                         }
 
                         .dropdown-menu {
-                            margin: 0;
-                            padding: 0 5px;
                             list-style: none;
                             background-color: #f5f5f5;
                             border: thin solid #b1aeae;
@@ -106,16 +72,10 @@
                             }
 
                             li {
-                                padding: 10px 5px;
-                                font-size: 14px;
                                 cursor: pointer;
 
                                 &:not(:last-child) {
                                     border-bottom: thin solid #d1cece;
-                                }
-
-                                &:hover {
-                                    padding-left: 10px;
                                 }
                             }
                         }
@@ -126,14 +86,89 @@
                     background-color: #3a82ca;
                     color: #fff;
                     border: none;
-                    font-size: 18px;
-                    padding: 15px 20px;
-                    margin-top: 40px;
                     width: 100%;
                     cursor: pointer;
 
                     &:hover {
                         background-color: #327ac3;
+                    }
+                }
+            }
+
+            // RESPONSIVENESS
+            @media screen and (min-width: 250px) {
+                padding: 100px 0;
+
+                form {
+                    min-width: 400px;
+                    padding: 40px;
+                    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+
+                    .form-field {
+                        margin-bottom: 30px;
+
+                        label, .label {
+                            margin-bottom: 10px;
+                            font-size: 16px;
+                        }
+
+                        input {
+                            padding: 5px;
+                            font-size: 14px;
+                        }
+
+                        textarea {
+                            padding: 10px;
+                            height: 100px;
+                            font-size: 14px;
+                        }
+
+                        .dropdown-container {
+                            .dropdown-button {
+                                padding: 5px 10px;
+
+                                span {
+                                    font-size: 16px;
+                                }
+
+                                .arrow {
+                                    width: 25px;
+                                    height: 25px;
+
+                                    .arrow-line {
+                                        height: 2px;
+
+                                        &:first-child {
+                                            transform: rotate(35deg) translateX(1px);
+                                        }
+
+                                        &:last-child {
+                                            transform: rotate(-35deg) translateX(-2px);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .dropdown-menu {
+                                margin: 0;
+                                padding: 0 5px;
+
+                                li {
+                                    padding: 10px 5px;
+                                    font-size: 14px;
+
+                                    &:hover {
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        font-size: 18px;
+                        padding: 15px 20px;
+                        margin-top: 40px;
                     }
                 }
             }
