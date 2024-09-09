@@ -6,15 +6,16 @@ import {
 
 // views
 // import Home from './views/Home';
+import MyWork from './views/MyWork';
 // import AboutMe from './views/AboutMe';
-import Contact from './views/Contact';
+// import Contact from './views/Contact';
 
 
 
 const ROUTER = createBrowserRouter([
   {
     path: '/',
-    element: <Contact /> // temp
+    element: <MyWork /> // temp
   }
 ]);
 

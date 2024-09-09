@@ -1,6 +1,7 @@
 @import 'Navbar';
 @import 'Footer';
 @import 'HomePageStylesheet';
+@import 'MyWorkPageStylesheet';
 @import 'AboutMePageStylesheet';
 @import 'ContactPageStylesheet.scss';
 
@@ -22,6 +23,8 @@ body {
         @include Footer();
 
         @include HomePageStylesheet();
+
+        @include MyWorkPageStylesheet();
 
         @include AboutMePageStylesheet();
 
