@@ -69,6 +69,8 @@ function Contact() {
             <Navbar />
 
             <main>
+                <div className='flash-message'>Message</div>
+
                 <form action='/' method='post'>
                     <div className='form-field'>
                         <label htmlFor='email'>Email</label>

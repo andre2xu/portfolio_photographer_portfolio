@@ -13,6 +13,20 @@
             height: 100%;
             width: 100%;
             font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+
+            .flash-message {
+                position: absolute;
+                top: 2%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #f2b8b8;
+                opacity: 0%;
+
+                &.success {
+                    background-color: #8ff37f;
+                }
+            }
 
             form {
                 display: flex;
@@ -99,6 +113,13 @@
             @media screen and (min-width: 250px) {
                 padding: 150px 0;
 
+                .flash-message {
+                    padding: 15px 35px;
+                    font-size: 16px;
+                    width: 50%;
+                    line-height: 125%;
+                }
+
                 form {
                     width: 72%;
                     max-width: 400px;
@@ -180,8 +201,20 @@
                 }
             }
 
+            @media screen and (min-width: 600px) {
+                .flash-message {
+                    max-width: 350px;
+                }
+            }
+
             @media screen and (min-width: 2000px) {
                 padding: 7.5vw 0;
+
+                .flash-message {
+                    padding: 0.75vw 1.75vw;
+                    font-size: 0.8vw;
+                    max-width: 17.5vw;
+                }
 
                 form {
                     max-width: 20vw;
