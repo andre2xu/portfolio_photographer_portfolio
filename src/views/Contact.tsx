@@ -61,6 +61,79 @@ function Contact() {
         toggleContactFormDropdown();
     };
 
+    function displayFlashMessage(message: string, isSuccess: boolean = false) {
+        const FLASH_MESSAGE: JQuery<HTMLElement> = $('.flash-message').first();
+
+        if (isSuccess) {
+            FLASH_MESSAGE.addClass('success');
+        }
+        else {
+            FLASH_MESSAGE.removeClass('success');
+        }
+
+        // make flash message appear
+        $({opacity: 0}).animate(
+            {opacity: 100},
+            {
+                duration: 900,
+                step: (now) => {
+                    FLASH_MESSAGE.css({opacity: `${now}%`});
+                },
+                queue: false // run simultaneously with the movement animation
+            }
+        );
+
+        // make flash message slide down
+        FLASH_MESSAGE.css({display: 'block'});
+
+        $({pos: -10}).animate(
+            {pos: 3},
+            {
+                duration: 500,
+                step: (now) => {
+                    FLASH_MESSAGE.text(message);
+
+                    FLASH_MESSAGE.css({top: `${now}%`});
+                },
+                complete: () => {
+                    // make flash message disappear
+                    setTimeout(() => {
+                        FLASH_MESSAGE.css({
+                            top: '-10%',
+                            opacity: '0%',
+                            display: 'none'
+                        });
+                    }, 4000);
+                }
+            }
+        );
+    };
+
+    function contactFormSubmission(event: any) {
+        event.preventDefault();
+
+        let is_valid: boolean = true;
+
+        $('main form input').each((_, element: HTMLElement) => {
+            if (element instanceof HTMLInputElement) {
+                if (element.value.length === 0) {
+                    displayFlashMessage("Please fill in all required fields");
+
+                    is_valid = false;
+
+                    return false; // stop loop
+                }
+            }
+        });
+
+        if (is_valid) {
+            displayFlashMessage(
+                "I've received your message. I'll try to respond via email within 48 hours.",
+                true
+            );
+        }
+    };
+
 
 
     // HTML
@@ -71,7 +144,7 @@ function Contact() {
             <main>
                 <div className='flash-message'>Message</div>
 
-                <form action='/' method='post'>
+                <form action='/' method='post' onSubmit={contactFormSubmission}>
                     <div className='form-field'>
                         <label htmlFor='email'>Email</label>
                         <input type='text' id='email' name='email' />
@@ -117,7 +190,7 @@ function Contact() {
                     </div>
 
                     <div className='form-field'>
-                        <label htmlFor='message'>Message</label>
+                        <label htmlFor='message'>Message (optional)</label>
                         <textarea name='message' id='message' placeholder='Anything I need to know?'></textarea>
                     </div>
 
