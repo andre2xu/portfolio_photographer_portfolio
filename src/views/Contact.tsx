@@ -32,7 +32,7 @@ function Contact() {
                     </div>
 
                     <div className='form-field'>
-                        <span>Service</span>
+                        <span className='label'>Service</span>
 
                         <div className='dropdown-container'>
                             <div className='dropdown-button'>
