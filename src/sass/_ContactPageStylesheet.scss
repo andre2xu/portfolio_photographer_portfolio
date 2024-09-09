@@ -16,12 +16,13 @@
             position: relative;
 
             .flash-message {
-                position: absolute;
-                top: 2%;
+                position: fixed;
                 left: 50%;
                 transform: translateX(-50%);
                 background-color: #f2b8b8;
                 opacity: 0%;
+                z-index: 999;
+                display: none;
 
                 &.success {
                     background-color: #8ff37f;
