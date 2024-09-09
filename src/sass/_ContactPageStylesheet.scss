@@ -180,8 +180,80 @@
                 }
             }
 
-            @media screen and (min-width: 550px) {
-                padding: 200px 0;
+            @media screen and (min-width: 2000px) {
+                padding: 7.5vw 0;
+
+                form {
+                    max-width: 20vw;
+                    padding: 2vw;
+                    box-shadow: 0.15vw 0.15vw 0.15vw rgba(0,0,0,0.1);
+
+                    .form-field {
+                        margin-bottom: 1.5vw;
+
+                        label, .label {
+                            margin-bottom: 0.5vw;
+                            font-size: 0.8vw;
+                        }
+
+                        input {
+                            padding: 0.25vw;
+                            font-size: 0.7vw;
+                        }
+
+                        textarea {
+                            padding: 0.5vw;
+                            height: 5vw;
+                            font-size: 0.7vw;
+                        }
+
+                        .dropdown-container {
+                            .dropdown-button {
+                                padding: 0.25vw 0.5vw;
+
+                                span {
+                                    font-size: 0.8vw;
+                                }
+
+                                .arrow {
+                                    width: 1.25vw;
+                                    height: 1.25vw;
+
+                                    .arrow-line {
+                                        height: 0.1vw;
+
+                                        &:first-child {
+                                            transform: rotate(35deg) translateX(0.05vw);
+                                        }
+
+                                        &:last-child {
+                                            transform: rotate(-35deg) translateX(-0.1vw);
+                                        }
+                                    }
+                                }
+                            }
+
+                            .dropdown-menu {
+                                padding: 0 0.25vw;
+
+                                li {
+                                    padding: 0.5vw 0.25vw;
+                                    font-size: 0.7vw;
+
+                                    &:hover {
+                                        padding-left: 0.5vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        font-size: 0.9vw;
+                        padding: 0.75vw 1vw;
+                        margin-top: 2vw;
+                    }
+                }
             }
         }
     }
