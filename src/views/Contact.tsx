@@ -27,7 +27,7 @@ function Contact() {
                     </div>
 
                     <div className='form-field'>
-                        <label htmlFor='location'>Location</label>
+                        <label htmlFor='location'>Location for Service</label>
                         <input type='text' id='location' name='location' />
                     </div>
 
