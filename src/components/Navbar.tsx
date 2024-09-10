@@ -52,17 +52,17 @@ function Navbar() {
                 <li><Link to={'/contact'}>Contact</Link></li>
             </ul>
 
-            <div className='hamburger-menu-button' onClick={toggleHamburgerMenu}>
+            <div className='hamburger-menu-button' onClick={toggleHamburgerMenu} tabIndex={0}>
                 <div className='hamburger-menu-line'></div>
                 <div className='hamburger-menu-line'></div>
                 <div className='hamburger-menu-line'></div>
             </div>
 
-            <ul className='hamburger-menu hide'>
-                <li onClick={toggleHamburgerMenu}>X</li>
-                <li><Link to={'/mywork'}>My Work</Link></li>
-                <li><Link to={'/about'}>About Me</Link></li>
-                <li><Link to={'/contact'}>Contact</Link></li>
+            <ul className='hamburger-menu hide' role='menu'>
+                <li onClick={toggleHamburgerMenu} tabIndex={0} role='button'>X</li>
+                <li role='menuitem'><Link to={'/mywork'}>My Work</Link></li>
+                <li role='menuitem'><Link to={'/about'}>About Me</Link></li>
+                <li role='menuitem'><Link to={'/contact'}>Contact</Link></li>
             </ul>
         </nav>
     );

@@ -18,6 +18,10 @@
                 span {
                     color: #d2b92b;
                 }
+
+                &:focus {
+                    outline: thin solid red;
+                }
             }
         }
 
@@ -35,6 +39,10 @@
                     color: #fff;
                     text-decoration: none;
                     cursor: pointer;
+
+                    &:focus {
+                        outline: thin solid red;
+                    }
                 }
             }
         }
@@ -47,6 +55,10 @@
 
             &:hover {
                 cursor: pointer;
+            }
+
+            &:focus {
+                outline: thin solid red;
             }
 
             .hamburger-menu-line {
@@ -70,6 +82,10 @@
             li {
                 color: #fff;
 
+                &:focus {
+                    outline: thin solid red;
+                }
+
                 &:first-child {
                     margin-left: auto;
                     cursor: pointer;
@@ -90,6 +106,10 @@
                 a {
                     text-decoration: none;
                     color: #fff;
+
+                    &:focus {
+                        outline: thin solid red;
+                    }
                 }
             }
         }
