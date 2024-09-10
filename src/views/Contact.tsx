@@ -14,6 +14,18 @@ function Contact() {
 
 
     // HELPERS
+    function keyUpEventHandler(event: any) {
+        const KEY_PRESSED: string = event.key;
+
+        if (KEY_PRESSED === 'Enter') {
+            const ELEMENT: JQuery<HTMLElement> = $(event.target);
+
+            if (ELEMENT.hasClass('dropdown-button') || (ELEMENT.parent().hasClass('dropdown-menu') && ELEMENT[0].tagName === 'LI')) {
+                ELEMENT.trigger('click');
+            }
+        }
+    };
+
     function toggleContactFormDropdown() {
         const DROPDOWN_BUTTON_ARROW: JQuery<HTMLElement> = $('.dropdown-button .arrow').first();
         const DROPDOWN_MENU: JQuery<HTMLElement> = $('.dropdown-menu').first();
@@ -144,7 +156,7 @@ function Contact() {
             <main>
                 <div className='flash-message'>Message</div>
 
-                <form action='/' method='post' onSubmit={contactFormSubmission}>
+                <form action='/' method='post' onSubmit={contactFormSubmission} onKeyUp={(event) => keyUpEventHandler(event)}>
                     <div className='form-field'>
                         <label tabIndex={0} htmlFor='email'>Email</label>
                         <input type='text' id='email' name='email' />
