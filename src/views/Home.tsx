@@ -20,6 +20,7 @@ function Home() {
     const CAMERA_SHUTTER_IS_CLOSED: React.MutableRefObject<boolean> = React.useRef(false);
     const TEASER_IMAGES: React.MutableRefObject<JQuery<HTMLElement> | undefined> = React.useRef(undefined);
     const IMAGE_POINTER: React.MutableRefObject<number> = React.useRef(0);
+    const CAMERA_SHUTTER_ANIMATION_INTERVAL: React.MutableRefObject<NodeJS.Timer | null> = React.useRef(null);
 
 
 
@@ -33,9 +34,32 @@ function Home() {
 
         TEASER_IMAGES.current = $('#camera-shutter .teaser-image');
 
-        setInterval(() => {
+        CAMERA_SHUTTER_ANIMATION_INTERVAL.current = setInterval(() => {
             toggleCameraShutter();
         }, 5000);
+
+        // disable animation if user leaves the page (to prevent it breaking)
+        document.body.addEventListener('mouseleave', () => {
+            if (CAMERA_SHUTTER_ANIMATION_INTERVAL.current !== null) {
+                clearInterval(CAMERA_SHUTTER_ANIMATION_INTERVAL.current);
+
+                // reset shutter positions
+                $('#camera-shutter .cover').each((_, shutter: HTMLElement) => {
+                    shutter.removeAttribute('style');
+                });
+            }
+        });
+
+        // restart animation if user goes back to page
+        document.body.addEventListener('mouseenter', () => {
+            if (CAMERA_SHUTTER_ANIMATION_INTERVAL.current !== null) {
+                clearInterval(CAMERA_SHUTTER_ANIMATION_INTERVAL.current);
+            }
+
+            CAMERA_SHUTTER_ANIMATION_INTERVAL.current = setInterval(() => {
+                toggleCameraShutter();
+            }, 5000);
+        });
     });
 
     React.useEffect(() => {
