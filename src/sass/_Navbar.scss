@@ -9,6 +9,12 @@
         padding-right: 20px;
         z-index: 100;
 
+        a {
+            &:focus {
+                outline: thin solid red;
+            }
+        }
+
         h1 {
             a {
                 color: #fff;
@@ -17,10 +23,6 @@
 
                 span {
                     color: #d2b92b;
-                }
-
-                &:focus {
-                    outline: thin solid red;
                 }
             }
         }
@@ -39,10 +41,6 @@
                     color: #fff;
                     text-decoration: none;
                     cursor: pointer;
-
-                    &:focus {
-                        outline: thin solid red;
-                    }
                 }
             }
         }
@@ -82,16 +80,16 @@
             li {
                 color: #fff;
 
-                &:focus {
-                    outline: thin solid red;
-                }
-
                 &:first-child {
                     margin-left: auto;
                     cursor: pointer;
 
                     &:hover {
                         color: #b22222;
+                    }
+
+                    &:focus {
+                        outline: thin solid red;
                     }
                 }
 
@@ -106,10 +104,6 @@
                 a {
                     text-decoration: none;
                     color: #fff;
-
-                    &:focus {
-                        outline: thin solid red;
-                    }
                 }
             }
         }
