@@ -57,6 +57,12 @@
             display: flex;
             flex-direction: column;
 
+            h1, p, q, #services li {
+                &:focus {
+                    outline: thin solid red;
+                }
+            }
+
             #teaser-section {
                 display: flex;
                 flex-direction: row;

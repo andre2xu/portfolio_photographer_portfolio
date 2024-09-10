@@ -191,9 +191,9 @@ function Home() {
             <main>
                 <div id='teaser-section' className='section'>
                     <div id='teaser-section-text'>
-                        <h1>Professional Photos</h1>
+                        <h1 tabIndex={0}>Professional Photos</h1>
 
-                        <p>Don't settle for less. Go for the best.</p>
+                        <p tabIndex={0}>Don't settle for less. Go for the best.</p>
                     </div>
 
                     <div id='camera'>
@@ -224,50 +224,50 @@ function Home() {
                     <article className='testimonial'>
                         <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-hannah-nelson-390257-1456951.jpg)'}}></div>
 
-                        <q>
+                        <q tabIndex={0}>
                             I couldn't be happier with the photos from my son's college graduation! You captured such an important moment in our lives with an eye for detail that made every shot feel personal and meaningful. The photos of him in his cap and gown, along with the shots of us as a family, really exceeded my expectations. The professionalism and creativity you brought to the session made it a memorable experience for all of us, and the final images were absolutely stunning. Thank you for helping us celebrate such a milestone, we'll cherish these pictures for a lifetime!
                         </q>
 
-                        <p>Mark J.</p>
+                        <p tabIndex={0}>Mark J.</p>
                     </article>
 
                     <article className='testimonial'>
                         <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-shvets-production-7516573.jpg)'}}></div>
 
-                        <q>
+                        <q tabIndex={0}>
                             Thank you so much for the beautiful photos of my daughter's wedding. I'm very impressed that you've managed to capture the joy, the love, and all the little moments that made it special. From the stunning portraits to the candid shots that felt so genuine, each picture clearly tells a story. Your professionalism, patience, and attention to detail were incredible, and you made everyone feel so comfortable in front of the camera. I just want you to know that they're more than just pictures — they are memories we will treasure forever.
                         </q>
 
-                        <p>Linda S.</p>
+                        <p tabIndex={0}>Linda S.</p>
                     </article>
 
                     <article className='testimonial'>
                         <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-streetwindy-1776846.jpg)'}}></div>
 
-                        <q>
+                        <q tabIndex={0}>
                             I am SO impressed with the product photos you took for my business! Honestly, I knew I wanted something clean and professional, but you completely blew me away with how you made everything look so polished and eye-catching. The lighting, the angles, and the attention to even the smallest details were spot-on. I've already noticed a difference in how people respond to my products online — the photos just pop! You really understood my brand and what I was going for, and I couldn't be more grateful. I'll definitely be back for more shoots as my business grows!
                         </q>
 
-                        <p>Mei Z.</p>
+                        <p tabIndex={0}>Mei Z.</p>
                     </article>
                 </div>
 
                 <section id='services-section' className='section'>
-                    <h1>My Services</h1>
+                    <h1 tabIndex={0}>My Services</h1>
 
-                    <p>I will do photographs for the following. If you want a service that is not included in this list, please contact me and maybe we can arrange something.</p>
+                    <p tabIndex={0}>I will do photographs for the following. If you want a service that is not included in this list, please contact me and maybe we can arrange something.</p>
 
                     <div id='services'>
                         <ul>
-                            <li>Weddings</li>
-                            <li>Products/Advertisements</li>
-                            <li>Class Photos</li>
+                            <li tabIndex={0}>Weddings</li>
+                            <li tabIndex={0}>Products/Advertisements</li>
+                            <li tabIndex={0}>Class Photos</li>
                         </ul>
 
                         <ul>
-                            <li>Passport</li>
-                            <li>Modeling Shoots</li>
-                            <li>Graduation</li>
+                            <li tabIndex={0}>Passport</li>
+                            <li tabIndex={0}>Modeling Shoots</li>
+                            <li tabIndex={0}>Graduation</li>
                         </ul>
                     </div>
                 </section>
