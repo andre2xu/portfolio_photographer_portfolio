@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.js": "/portfolio_photographer_portfolio/static/js/main.a04a7779.js",
+    "main.js": "/portfolio_photographer_portfolio/static/js/main.a6605a10.js",
     "static/media/pexels-sabel-blanco-662810-2339724.jpg": "/portfolio_photographer_portfolio/static/media/pexels-sabel-blanco-662810-2339724.97bc635ff5d91e7e4605.jpg",
     "static/media/pexels-pixabay-265722.jpg": "/portfolio_photographer_portfolio/static/media/pexels-pixabay-265722.9c5e39269a8a5ba39d1e.jpg",
+    "static/media/pexels-hikaique-108148.jpg": "/portfolio_photographer_portfolio/static/media/pexels-hikaique-108148.8302119a68bcf2c409b0.jpg",
     "static/media/pexels-hannah-nelson-390257-1456951.jpg": "/portfolio_photographer_portfolio/static/media/pexels-hannah-nelson-390257-1456951.0d8cdd3c6c239a7363da.jpg",
     "static/media/pexels-shvets-production-7516573.jpg": "/portfolio_photographer_portfolio/static/media/pexels-shvets-production-7516573.2d8cdbfc19e4d6f1a61a.jpg",
     "static/media/pexels-137666-710744.jpg": "/portfolio_photographer_portfolio/static/media/pexels-137666-710744.08b1cdc97dfa30966acf.jpg",
@@ -21,9 +22,9 @@
     "static/media/pexels-joshua-mcknight-442355-1139319.jpg": "/portfolio_photographer_portfolio/static/media/pexels-joshua-mcknight-442355-1139319.a7845e830138fdc00cf0.jpg",
     "static/media/pexels-jose-martin-segura-benites-1422456152-27298415.jpg": "/portfolio_photographer_portfolio/static/media/pexels-jose-martin-segura-benites-1422456152-27298415.c322b4b1610a658729a2.jpg",
     "index.html": "/portfolio_photographer_portfolio/index.html",
-    "main.a04a7779.js.map": "/portfolio_photographer_portfolio/static/js/main.a04a7779.js.map"
+    "main.a6605a10.js.map": "/portfolio_photographer_portfolio/static/js/main.a6605a10.js.map"
   },
   "entrypoints": [
-    "static/js/main.a04a7779.js"
+    "static/js/main.a6605a10.js"
   ]
 }
