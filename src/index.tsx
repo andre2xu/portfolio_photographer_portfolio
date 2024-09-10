@@ -36,3 +36,10 @@ const ROOT: ReactDOM.Root = ReactDOM.createRoot(document.getElementById('root') 
 ROOT.render(
   <RouterProvider router={ROUTER} />
 );
+
+window.addEventListener('load', () => {
+  // disable focus for clicks
+  document.body.addEventListener('mousedown', (event: MouseEvent) => {
+    event.preventDefault();
+  });
+});
