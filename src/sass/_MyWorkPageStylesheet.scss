@@ -62,6 +62,24 @@
                     }
                 }
             }
+
+            @media screen and (min-width: 2000px) {
+                padding: 1.5vw 0 2.5vw;
+
+                .image-column {
+                    $image_spacing: 0.75vw;
+
+                    max-width: 15vw;
+
+                    &:not(:last-child) {
+                        margin-right: $image_spacing;
+                    }
+
+                    img {
+                        margin-bottom: $image_spacing;
+                    }
+                }
+            }
         }
     }
 }
