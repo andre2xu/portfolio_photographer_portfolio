@@ -37,11 +37,23 @@ function Navbar() {
         }
     };
 
+    function keyUpEventHandler(event: any) {
+        const KEY_PRESSED: string = event.key;
+
+        if (KEY_PRESSED === 'Enter') {
+            const ELEMENT: JQuery<HTMLElement> = $(event.target);
+
+            if (ELEMENT.hasClass('hamburger-menu-button') || (ELEMENT.parent().hasClass('hamburger-menu') && ELEMENT.attr('role') === 'button')) {
+                ELEMENT.trigger('click');
+            }
+        }
+    };
+
 
 
     // HTML
     return (
-        <nav>
+        <nav onKeyUp={(event) => keyUpEventHandler(event)}>
             <h1>
                 <Link to={'/'}><span>Pro</span>tos</Link>
             </h1>
