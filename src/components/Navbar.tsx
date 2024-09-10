@@ -47,9 +47,9 @@ function Navbar() {
             </h1>
 
             <ul className='navbar-links'>
-                <li><Link to={'/'}>My Work</Link></li>
-                <li><Link to={'/'}>About Me</Link></li>
-                <li><Link to={'/'}>Contact</Link></li>
+                <li><Link to={'/mywork'}>My Work</Link></li>
+                <li><Link to={'/about'}>About Me</Link></li>
+                <li><Link to={'/contact'}>Contact</Link></li>
             </ul>
 
             <div className='hamburger-menu-button' onClick={toggleHamburgerMenu}>
@@ -60,9 +60,9 @@ function Navbar() {
 
             <ul className='hamburger-menu hide'>
                 <li onClick={toggleHamburgerMenu}>X</li>
-                <li><Link to={'/'}>My Work</Link></li>
-                <li><Link to={'/'}>About Me</Link></li>
-                <li><Link to={'/'}>Contact</Link></li>
+                <li><Link to={'/mywork'}>My Work</Link></li>
+                <li><Link to={'/about'}>About Me</Link></li>
+                <li><Link to={'/contact'}>Contact</Link></li>
             </ul>
         </nav>
     );
