@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/portfolio_photographer_portfolio/static/js/main.765a0050.js",
+    "main.js": "/portfolio_photographer_portfolio/static/js/main.aa90fb12.js",
     "index.html": "/portfolio_photographer_portfolio/index.html",
-    "main.765a0050.js.map": "/portfolio_photographer_portfolio/static/js/main.765a0050.js.map"
+    "main.aa90fb12.js.map": "/portfolio_photographer_portfolio/static/js/main.aa90fb12.js.map"
   },
   "entrypoints": [
-    "static/js/main.765a0050.js"
+    "static/js/main.aa90fb12.js"
   ]
 }
