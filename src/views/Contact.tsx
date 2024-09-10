@@ -146,30 +146,30 @@ function Contact() {
 
                 <form action='/' method='post' onSubmit={contactFormSubmission}>
                     <div className='form-field'>
-                        <label htmlFor='email'>Email</label>
+                        <label tabIndex={0} htmlFor='email'>Email</label>
                         <input type='text' id='email' name='email' />
                     </div>
 
                     <div className='form-field'>
-                        <label htmlFor='fname'>First Name</label>
+                        <label tabIndex={0} htmlFor='fname'>First Name</label>
                         <input type='text' id='fname' name='fname' />
                     </div>
 
                     <div className='form-field'>
-                        <label htmlFor='lname'>Last Name</label>
+                        <label tabIndex={0} htmlFor='lname'>Last Name</label>
                         <input type='text' id='lname' name='lname' />
                     </div>
 
                     <div className='form-field'>
-                        <label htmlFor='location'>Location for Service</label>
+                        <label tabIndex={0} htmlFor='location'>Location for Service</label>
                         <input type='text' id='location' name='location' />
                     </div>
 
                     <div className='form-field'>
-                        <span className='label'>Service</span>
+                        <span tabIndex={0} className='label'>Service</span>
 
                         <div className='dropdown-container'>
-                            <div className='dropdown-button' onClick={toggleContactFormDropdown}>
+                            <div tabIndex={0} className='dropdown-button' onClick={toggleContactFormDropdown} >
                                 <span>Wedding</span>
 
                                 <div className='arrow'>
@@ -179,18 +179,18 @@ function Contact() {
                             </div>
 
                             <ul className='dropdown-menu hide' onClick={(event) => selectService(event)}>
-                                <li>Wedding</li>
-                                <li>Business</li>
-                                <li>Class Photo</li>
-                                <li>Passport</li>
-                                <li>Modeling</li>
-                                <li>Graduation</li>
+                                <li tabIndex={0}>Wedding</li>
+                                <li tabIndex={0}>Business</li>
+                                <li tabIndex={0}>Class Photo</li>
+                                <li tabIndex={0}>Passport</li>
+                                <li tabIndex={0}>Modeling</li>
+                                <li tabIndex={0}>Graduation</li>
                             </ul>
                         </div>
                     </div>
 
                     <div className='form-field'>
-                        <label htmlFor='message'>Message (optional)</label>
+                        <label tabIndex={0} htmlFor='message'>Message (optional)</label>
                         <textarea name='message' id='message' placeholder='Anything I need to know?'></textarea>
                     </div>
 

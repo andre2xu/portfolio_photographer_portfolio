@@ -34,6 +34,14 @@
                 background-color: #f9f9f9;
                 border: thin solid #e2e2e2;
 
+                label, .label {
+                    width: fit-content;
+
+                    &:focus {
+                        outline: thin solid red;
+                    }
+                }
+
                 .form-field {
                     display: flex;
                     flex-direction: column;
@@ -72,6 +80,10 @@
                                     background-color: #838080;
                                 }
                             }
+
+                            &:focus {
+                                outline: thick solid red;
+                            }
                         }
 
                         .dropdown-menu {
@@ -90,6 +102,10 @@
                                 &:not(:last-child) {
                                     border-bottom: thin solid #d1cece;
                                 }
+
+                                &:focus {
+                                    outline: thick solid red;
+                                }
                             }
                         }
                     }
@@ -104,6 +120,10 @@
 
                     &:hover {
                         background-color: #327ac3;
+                    }
+
+                    &:focus {
+                        outline: thick solid red;
                     }
                 }
             }
