@@ -14,8 +14,8 @@ function Footer() {
                 </ul>
 
                 <ul id='footer-legal-links'>
-                    <li><a href='#not-available'>Terms of Service</a></li>
-                    <li><a href='#not-available'>Privacy Policy</a></li>
+                    <li><a href='#'>Terms of Service</a></li>
+                    <li><a href='#'>Privacy Policy</a></li>
                 </ul>
             </div>
 
