@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider
 } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ import Contact from './views/Contact';
 
 
 
-const ROUTER = createBrowserRouter([
+const ROUTER = createHashRouter([
   {
     path: '/',
     element: <Home />
