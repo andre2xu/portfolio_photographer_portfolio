@@ -119,6 +119,9 @@ function Contact() {
                 }
             }
         );
+
+        // make screen reader read flash message
+        FLASH_MESSAGE[0].focus();
     };
 
     function contactFormSubmission(event: any) {
@@ -154,7 +157,7 @@ function Contact() {
             <Navbar />
 
             <main>
-                <div className='flash-message'>Message</div>
+                <div tabIndex={0} className='flash-message'>Message</div>
 
                 <form action='/' method='post' onSubmit={contactFormSubmission} onKeyUp={(event) => keyUpEventHandler(event)}>
                     <div className='form-field'>
