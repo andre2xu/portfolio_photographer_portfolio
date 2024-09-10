@@ -10,6 +10,10 @@
     src: url('/fonts/PlaywriteCU-Regular.woff') format('woff'); // relative to public folder
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     margin: 0;
     padding: 0;
