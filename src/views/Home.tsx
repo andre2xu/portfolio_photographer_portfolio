@@ -5,6 +5,15 @@ import $ from 'jquery';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+// static
+const IMG_1 = require('../images/teasers/pexels-trungnguyenphotog-1630860.jpg');
+const IMG_2 = require('../images/teasers/pexels-sabel-blanco-662810-2339724.jpg');
+const IMG_3 = require('../images/teasers/pexels-valeriya-1961794.jpg');
+const IMG_4 = require('../images/teasers/pexels-pixabay-261102.jpg');
+const IMG_5 = require('../images/testimonials/pexels-hannah-nelson-390257-1456951.jpg');
+const IMG_6 = require('../images/testimonials/pexels-shvets-production-7516573.jpg');
+const IMG_7 = require('../images/testimonials/pexels-streetwindy-1776846.jpg');
+
 
 
 function Home() {
@@ -209,20 +218,20 @@ function Home() {
                             <div className='cover n5'></div>
                             <div className='cover n6'></div>
 
-                            <div className='teaser-image' style={{backgroundImage: 'url(/images/teasers/pexels-trungnguyenphotog-1630860.jpg)'}}></div>
+                            <div className='teaser-image' style={{backgroundImage: `url(${IMG_1})`}}></div>
 
-                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/teasers/pexels-sabel-blanco-662810-2339724.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: `url(${IMG_2})`}}></div>
 
-                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/teasers/pexels-valeriya-1961794.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: `url(${IMG_3})`}}></div>
 
-                            <div className='teaser-image hide' style={{backgroundImage: 'url(/images/teasers/pexels-pixabay-261102.jpg)'}}></div>
+                            <div className='teaser-image hide' style={{backgroundImage: `url(${IMG_4})`}}></div>
                         </div>
                     </div>
                 </div>
 
                 <div id='testimonials-section' className='section'>
                     <article className='testimonial'>
-                        <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-hannah-nelson-390257-1456951.jpg)'}}></div>
+                        <div className='client-picture' style={{backgroundImage: `url(${IMG_5})`}}></div>
 
                         <q tabIndex={0}>
                             I couldn't be happier with the photos from my son's college graduation! You captured such an important moment in our lives with an eye for detail that made every shot feel personal and meaningful. The photos of him in his cap and gown, along with the shots of us as a family, really exceeded my expectations. The professionalism and creativity you brought to the session made it a memorable experience for all of us, and the final images were absolutely stunning. Thank you for helping us celebrate such a milestone, we'll cherish these pictures for a lifetime!
@@ -232,7 +241,7 @@ function Home() {
                     </article>
 
                     <article className='testimonial'>
-                        <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-shvets-production-7516573.jpg)'}}></div>
+                        <div className='client-picture' style={{backgroundImage: `url(${IMG_6})`}}></div>
 
                         <q tabIndex={0}>
                             Thank you so much for the beautiful photos of my daughter's wedding. I'm very impressed that you've managed to capture the joy, the love, and all the little moments that made it special. From the stunning portraits to the candid shots that felt so genuine, each picture clearly tells a story. Your professionalism, patience, and attention to detail were incredible, and you made everyone feel so comfortable in front of the camera. I just want you to know that they're more than just pictures — they are memories we will treasure forever.
@@ -242,7 +251,7 @@ function Home() {
                     </article>
 
                     <article className='testimonial'>
-                        <div className='client-picture' style={{backgroundImage: 'url(/images/testimonials/pexels-streetwindy-1776846.jpg)'}}></div>
+                        <div className='client-picture' style={{backgroundImage: `url(${IMG_7})`}}></div>
 
                         <q tabIndex={0}>
                             I am SO impressed with the product photos you took for my business! Honestly, I knew I wanted something clean and professional, but you completely blew me away with how you made everything look so polished and eye-catching. The lighting, the angles, and the attention to even the smallest details were spot-on. I've already noticed a difference in how people respond to my products online — the photos just pop! You really understood my brand and what I was going for, and I couldn't be more grateful. I'll definitely be back for more shoots as my business grows!
