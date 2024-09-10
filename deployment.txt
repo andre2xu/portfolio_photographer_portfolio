@@ -1,0 +1,5 @@
+1. Ensure the following line is in package.json: "homepage": "https://andre2xu.github.io/portfolio_photographer_portfolio"
+
+2. Ensure the /public/index.html file is using the production URLs for the favicon and the index stylesheet
+
+3. Ensure the /src/sass/index.scss file is using the production URL for the font
