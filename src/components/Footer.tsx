@@ -20,16 +20,16 @@ function Footer() {
             </div>
 
             <div id='footer-info'>
-                <p>All images are sourced from Pexels.</p>
+                <p tabIndex={0}>All images are sourced from Pexels.</p>
 
                 <ul>
-                    <li>Email: dan@protos.com</li>
-                    <li>Phone: 123 456 7890</li>
+                    <li tabIndex={0}>Email: dan@protos.com</li>
+                    <li tabIndex={0}>Phone: 123 456 7890</li>
                     <li>
-                        <p>1 Fake Street,</p>
-                        <p>Fake City,</p>
-                        <p>Ireland</p>
-                        <p>F01 FSFC</p>
+                        <p tabIndex={0}>1 Fake Street,</p>
+                        <p tabIndex={0}>Fake City,</p>
+                        <p tabIndex={0}>Ireland</p>
+                        <p tabIndex={0}>F01 FSFC</p>
                     </li>
                 </ul>
             </div>
