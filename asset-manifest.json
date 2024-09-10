@@ -1,10 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio_photographer_portfolio/static/js/main.aa90fb12.js",
+    "main.js": "/portfolio_photographer_portfolio/static/js/main.b231ddbb.js",
+    "static/media/pexels-sabel-blanco-662810-2339724.jpg": "/portfolio_photographer_portfolio/static/media/pexels-sabel-blanco-662810-2339724.97bc635ff5d91e7e4605.jpg",
+    "static/media/pexels-hannah-nelson-390257-1456951.jpg": "/portfolio_photographer_portfolio/static/media/pexels-hannah-nelson-390257-1456951.0d8cdd3c6c239a7363da.jpg",
+    "static/media/pexels-shvets-production-7516573.jpg": "/portfolio_photographer_portfolio/static/media/pexels-shvets-production-7516573.2d8cdbfc19e4d6f1a61a.jpg",
+    "static/media/pexels-valeriya-1961794.jpg": "/portfolio_photographer_portfolio/static/media/pexels-valeriya-1961794.6402e6a7c34ca611ff2f.jpg",
+    "static/media/pexels-streetwindy-1776846.jpg": "/portfolio_photographer_portfolio/static/media/pexels-streetwindy-1776846.49872d617be27733e33a.jpg",
+    "static/media/pexels-pixabay-261102.jpg": "/portfolio_photographer_portfolio/static/media/pexels-pixabay-261102.efff2684d3dcb889d3ce.jpg",
+    "static/media/pexels-trungnguyenphotog-1630860.jpg": "/portfolio_photographer_portfolio/static/media/pexels-trungnguyenphotog-1630860.aa9c2316517d252f9e00.jpg",
     "index.html": "/portfolio_photographer_portfolio/index.html",
-    "main.aa90fb12.js.map": "/portfolio_photographer_portfolio/static/js/main.aa90fb12.js.map"
+    "main.b231ddbb.js.map": "/portfolio_photographer_portfolio/static/js/main.b231ddbb.js.map"
   },
   "entrypoints": [
-    "static/js/main.aa90fb12.js"
+    "static/js/main.b231ddbb.js"
   ]
 }
