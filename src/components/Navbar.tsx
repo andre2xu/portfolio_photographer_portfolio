@@ -54,7 +54,9 @@ function Navbar() {
     // HTML
     return (
         <nav onKeyUp={(event) => keyUpEventHandler(event)}>
-            <h1>
+            <p id='home-page-link-description' aria-hidden hidden style={{display: 'none'}}>Home page link</p>
+
+            <h1 aria-describedby='home-page-link-description'>
                 <Link to={'/'}><span>Pro</span>tos</Link>
             </h1>
 
