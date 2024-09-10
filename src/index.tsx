@@ -40,6 +40,8 @@ ROOT.render(
 window.addEventListener('load', () => {
   // disable focus for clicks
   document.body.addEventListener('mousedown', (event: MouseEvent) => {
-    event.preventDefault();
+    if ((event.target instanceof HTMLElement && (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA')) === false) {
+      event.preventDefault();
+    }
   });
 });
