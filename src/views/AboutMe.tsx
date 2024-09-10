@@ -14,7 +14,7 @@ function AboutMe() {
                     <h1 tabIndex={0}><span>Hello, I'm Dan</span> &#x270B;</h1>
 
                     <p tabIndex={0}>
-                        <div id='about-me-self-portrait' style={{backgroundImage: 'url(/images/aboutme/pexels-hikaique-108148.jpg)'}}></div>  I grew up in a small coastal town in Maine, where I was always surrounded by nature. Between the rocky cliffs, forests, and endless ocean views, I found myself constantly inspired by the world around me. When I was a teenager, I picked up an old film camera, and something just clicked (pun intended). It was a way for me to capture moments that felt fleeting like a perfect sunset or just the way light hit a street corner.
+                        <img id='about-me-self-portrait' src='/images/aboutme/pexels-hikaique-108148.jpg' alt='Self portrait'></img>  I grew up in a small coastal town in Maine, where I was always surrounded by nature. Between the rocky cliffs, forests, and endless ocean views, I found myself constantly inspired by the world around me. When I was a teenager, I picked up an old film camera, and something just clicked (pun intended). It was a way for me to capture moments that felt fleeting like a perfect sunset or just the way light hit a street corner.
 
                         After high school, I decided to pursue photography seriously and eventually turned it into a full-time freelance career. I've been at it for over 15 years now, working as a generalist photographer. I love the variety — whether it's shooting portraits, events, landscapes, or product photography, no two days are ever the same. It keeps me on my toes and constantly pushes me to see things in new ways. 
 
